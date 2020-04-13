@@ -28,7 +28,7 @@
           "backend": [
             {
               "host": [ "http://ms-thirdparty:5000" ],
-              "url_pattern": "/swagger"
+              "url_pattern": "/swagger/index.html"
             }
           ]
         }
