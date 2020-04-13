@@ -1,0 +1,18 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: krakend
+spec:
+  gateways:
+    - krakend
+  hosts:
+    - '*'
+  http:
+    - match:
+        - uri:
+            prefix: /api/third-party
+      route:
+        - destination:
+            host: krakend
+            port:
+              number: 8000

@@ -1,0 +1,22 @@
+{
+    "version": 2,
+    "name": "KrakenD api gateway",
+    "port": 8080,
+    "endpoints": [
+        {
+          "endpoint": "api/third-party",
+	      "querystring_params": ["*"],
+          "backend": [
+            {
+              "host": [ "http://ms-thirdparty:5000" ],
+              "url_pattern": "/api/third-party",
+              "extra_config": {
+                "github.com/devopsfaith/krakend/http": {
+                  "return_error_details": "backend_alias"
+                }
+              }
+            }
+          ]
+        }
+    ]
+}
