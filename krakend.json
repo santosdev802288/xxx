@@ -4,6 +4,7 @@
     "port": 8080,
     "endpoints": [
         {
+          
           "endpoint": "api/third-party/{source}/{id}",
 	      "querystring_params": ["*"],
           "backend": [
@@ -16,6 +17,9 @@
                 }
               }
             }
+          ],
+          "headers_to_pass":[
+            "*"
           ]
         },
         {
