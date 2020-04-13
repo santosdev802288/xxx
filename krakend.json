@@ -17,6 +17,16 @@
               }
             }
           ]
+        },
+        {
+          "endpoint": "api/third-party/swagger",
+          "querystring_params": ["*"],
+          "backend": [
+            {
+              "host": [ "http://ms-thirdparty:5000" ],
+              "url_pattern": "/swagger"
+            }
+          ]
         }
     ]
 }
