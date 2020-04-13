@@ -4,12 +4,12 @@
     "port": 8080,
     "endpoints": [
         {
-          "endpoint": "api/third-party",
+          "endpoint": "api/third-party/account",
 	      "querystring_params": ["*"],
           "backend": [
             {
               "host": [ "http://ms-thirdparty:5000" ],
-              "url_pattern": "/api/third-party",
+              "url_pattern": "/api/third-party/account",
               "extra_config": {
                 "github.com/devopsfaith/krakend/http": {
                   "return_error_details": "backend_alias"
