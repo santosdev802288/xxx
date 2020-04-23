@@ -1,27 +1,17 @@
 {
     "version": 2,
-    "name": "KrakenD api gateway",
+    "name": "KrakenD api gateway to third-party",
     "port": 8080,
     "endpoints": [
         {
-          
           "endpoint": "api/third-party/account/{id}",
-	      "querystring_params": ["*"],
-          "output_encoding": "no-op",
+	      "output_encoding": "no-op",
           "backend": [
             {
               "host": [ "http://ms-thirdparty:5000" ],
               "url_pattern": "/api/third-party/account/{id}",
-              "encoding": "no-op",
-              "extra_config": {
-                "github.com/devopsfaith/krakend/http": {
-                  "return_error_details": "backend_alias"
-                }
-              }
+              "encoding": "no-op"
             }
-          ],
-          "headers_to_pass":[
-            "*"
           ]
         },
         {
