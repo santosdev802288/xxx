@@ -8,8 +8,8 @@
 	      "output_encoding": "no-op",
           "backend": [
             {
-              "host": [ "http://ms-thirdparty:5000" ],
-              "url_pattern": "/api/third-party/account/{id}",
+              "host": [ "localhost:8080" ],
+              "url_pattern": "/__debug/login",
               "encoding": "no-op"
             }
           ]
