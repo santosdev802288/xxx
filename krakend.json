@@ -7,6 +7,7 @@
           "endpoint": "api/third-party/account/{id}",
 	      "output_encoding": "no-op",
           "headers_to_pass": ["*"],
+          "querystring_params": ["*"],
           "backend": [
             {
               "host": [ "http://ms-thirdparty:5000" ],
@@ -16,14 +17,15 @@
           ]
         },
         {
-          "endpoint": "api/third-party/swagger",
+          "endpoint": "api/third-party/account",
           "output_encoding": "no-op",
+          "headers_to_pass": ["*"],
           "querystring_params": ["*"],
           "backend": [
             {
-              "encoding": "no-op",
               "host": [ "http://ms-thirdparty:5000" ],
-              "url_pattern": "/swagger/index.html"
+              "url_pattern": "api/third-party/account",
+              "encoding": "no-op"
             }
           ]
         }
