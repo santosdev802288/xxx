@@ -6,6 +6,9 @@
         {
           "endpoint": "api/third-party/account/{id}",
 	      "output_encoding": "no-op",
+          "headers_to_pass": [
+            "*"
+          ],
           "backend": [
             {
               "host": [ "localhost:8080" ],
