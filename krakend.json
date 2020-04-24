@@ -7,7 +7,7 @@
           "endpoint": "api/third-party/account/{id}",
 	      "output_encoding": "no-op",
           "headers_to_pass": [
-            "*"
+            "Authorization"
           ],
           "backend": [
             {
