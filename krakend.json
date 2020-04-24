@@ -9,8 +9,8 @@
           "headers_to_pass": ["*"],
           "backend": [
             {
-              "host": [ "localhost:8080" ],
-              "url_pattern": "/__debug/login",
+              "host": [ "http://ms-thirdparty:5000" ],
+              "url_pattern": "api/third-party/account/{id}",
               "encoding": "no-op"
             }
           ]
