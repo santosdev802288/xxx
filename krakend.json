@@ -75,7 +75,7 @@
           "host": ["http://ms-thirdparty:5000"],
           "url_pattern": "api/StaticParameters/columnsThirdParty",
           "encoding": "no-op",
-          "method": "PUT"
+          "method": "GET"
         }
       ]
     },
