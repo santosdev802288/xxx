@@ -6,11 +6,27 @@ spec:
   gateways:
     - krakend
   hosts:
-    - '*'
+    - "*"
   http:
     - match:
         - uri:
             prefix: /api/third-party
+      route:
+        - destination:
+            host: krakend
+            port:
+              number: 8000
+    - match:
+        - uri:
+            prefix: /api/ThirdPartyInterface
+      route:
+        - destination:
+            host: krakend
+            port:
+              number: 8000
+    - match:
+        - uri:
+            prefix: /api/StaticParameters
       route:
         - destination:
             host: krakend
