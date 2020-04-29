@@ -32,3 +32,11 @@ spec:
             host: krakend
             port:
               number: 8000
+        corsPolicy:
+          allowOrigin:
+          - "*"
+          allowMethods:
+          - POST
+          - GET
+          allowHeaders:
+          - "*"
