@@ -3,6 +3,18 @@
   "name": "KrakenD api gateway to third-party",
   "port": 8080,
   "timeout": "10000ms",
+  "extra_config": {
+    "github_com/devopsfaith/krakend-cors": {
+      "allow_origins": [ "*" ],
+      "allow_methods": [ "POST", "GET", "PUT", "DELETE" ],
+      "allow_headers": [
+        "Origin",
+        "Authorization",
+        "Content-Type",
+        "Accept",
+        "X-Auth-Token"
+      ]
+  },
   "endpoints": [
     {
       "endpoint": "api/third-party/account/{id}",
