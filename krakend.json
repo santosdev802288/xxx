@@ -129,7 +129,14 @@
           "encoding": "no-op",
           "method": "GET"
         }
-      ]
+      ],
+      "extra_config": {
+        "github_com/devopsfaith/krakend-cors": {
+          "allow_origins": ["*"],
+          "allow_methods": ["POST", "GET", "PUT", "DELETE"],
+          "allow_headers": ["*"]
+        }
+      }
     }
   ]
 }
