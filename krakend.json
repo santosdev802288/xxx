@@ -5,8 +5,8 @@
   "timeout": "10000ms",
   "extra_config": {
     "github_com/devopsfaith/krakend-cors": {
-      "allow_origins": [ "*" ],
-      "allow_methods": [ "POST", "GET", "PUT", "DELETE" ],
+      "allow_origins": ["*"],
+      "allow_methods": ["POST", "GET", "PUT", "DELETE"],
       "allow_headers": [
         "Origin",
         "Authorization",
@@ -14,6 +14,7 @@
         "Accept",
         "X-Auth-Token"
       ]
+    }
   },
   "endpoints": [
     {
