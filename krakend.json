@@ -2,11 +2,11 @@
   "version": 2,
   "name": "KrakenD api gateway to third-party",
   "port": 8080,
-  "timeout": "10000ms",
+  "timeout": "3000ms",
   "endpoints": [
     {
-      "endpoint": "api/third-party/account/{id}",
-      "output_encoding": "no-op",
+      "endpoint": "/api/third-party/account/{id}",
+      "output_encoding": "json",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
       "method": "GET",
@@ -15,13 +15,16 @@
           "method": "GET",
           "host": ["http://ms-thirdparty:5000"],
           "url_pattern": "api/third-party/account/{id}",
-          "encoding": "no-op"
+          "encoding": "json",
+          "extra_config": {}
         }
-      ]
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
     },
     {
-      "endpoint": "api/third-party/account/{id}",
-      "output_encoding": "no-op",
+      "endpoint": "/api/third-party/account/{id}",
+      "output_encoding": "json",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
       "method": "DELETE",
@@ -30,13 +33,16 @@
           "method": "DELETE",
           "host": ["http://ms-thirdparty:5000"],
           "url_pattern": "api/third-party/account/{id}",
-          "encoding": "no-op"
+          "encoding": "json",
+          "extra_config": {}
         }
-      ]
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
     },
     {
-      "endpoint": "api/third-party/account",
-      "output_encoding": "no-op",
+      "endpoint": "/api/third-party/account",
+      "output_encoding": "json",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
       "method": "POST",
@@ -44,14 +50,17 @@
         {
           "host": ["http://ms-thirdparty:5000"],
           "url_pattern": "api/third-party/account",
-          "encoding": "no-op",
-          "method": "POST"
+          "encoding": "json",
+          "method": "POST",
+          "extra_config": {}
         }
-      ]
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
     },
     {
-      "endpoint": "api/third-party/account",
-      "output_encoding": "no-op",
+      "endpoint": "/api/third-party/account",
+      "output_encoding": "json",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
       "method": "PUT",
@@ -59,14 +68,17 @@
         {
           "host": ["http://ms-thirdparty:5000"],
           "url_pattern": "api/third-party/account",
-          "encoding": "no-op",
-          "method": "PUT"
+          "encoding": "json",
+          "method": "PUT",
+          "extra_config": {}
         }
-      ]
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
     },
     {
-      "endpoint": "api/StaticParameters/columnsThirdParty",
-      "output_encoding": "no-op",
+      "endpoint": "/api/StaticParameters/columnsThirdParty",
+      "output_encoding": "json",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
       "method": "GET",
@@ -74,14 +86,17 @@
         {
           "host": ["http://ms-thirdparty:5000"],
           "url_pattern": "api/StaticParameters/columnsThirdParty",
-          "encoding": "no-op",
-          "method": "GET"
+          "encoding": "json",
+          "method": "GET",
+          "extra_config": {}
         }
-      ]
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
     },
     {
-      "endpoint": "api/ThirdPartyInterface/GetFormatsAsync",
-      "output_encoding": "no-op",
+      "endpoint": "/api/ThirdPartyInterface/GetFormatsAsync",
+      "output_encoding": "json",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
       "method": "POST",
@@ -89,14 +104,17 @@
         {
           "host": ["http://ms-thirdparty:5000"],
           "url_pattern": "api/ThirdPartyInterface/GetFormatsAsync",
-          "encoding": "no-op",
-          "method": "POST"
+          "encoding": "json",
+          "method": "POST",
+          "extra_config": {}
         }
-      ]
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
     },
     {
-      "endpoint": "api/ThirdPartyInterface/ImportAccountsInterface",
-      "output_encoding": "no-op",
+      "endpoint": "/api/ThirdPartyInterface/ImportAccountsInterface",
+      "output_encoding": "json",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
       "method": "POST",
@@ -104,14 +122,17 @@
         {
           "host": ["http://ms-thirdparty:5000"],
           "url_pattern": "api/ThirdPartyInterface/ImportAccountsInterface",
-          "encoding": "no-op",
-          "method": "POST"
+          "encoding": "json",
+          "method": "POST",
+          "extra_config": {}
         }
-      ]
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
     },
     {
-      "endpoint": "api/ThirdPartyInterface/TPITemplate",
-      "output_encoding": "no-op",
+      "endpoint": "/api/ThirdPartyInterface/TPITemplate",
+      "output_encoding": "json",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
       "method": "GET",
@@ -119,10 +140,35 @@
         {
           "host": ["http://ms-thirdparty:5000"],
           "url_pattern": "api/ThirdPartyInterface/TPITemplate",
-          "encoding": "no-op",
-          "method": "GET"
+          "encoding": "json",
+          "method": "GET",
+          "extra_config": {}
         }
-      ]
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
     }
-  ]
+  ],
+  "extra_config": {
+    "github_com/devopsfaith/krakend-cors": {
+      "allow_origins": ["*"],
+      "allow_headers": ["Accept", "Origin", "Authorization", "Content-Type"],
+      "expose_headers": ["Content-Length"],
+      "max_age": "12h",
+      "allow_methods": [
+        "GET",
+        "HEAD",
+        "POST",
+        "PUT",
+        "DELETE",
+        "CONNECT",
+        "OPTIONS",
+        "TRACE",
+        "PATCH"
+      ],
+      "allow_credentials": true
+    }
+  },
+  "cache_ttl": "300s",
+  "output_encoding": "json"
 }
