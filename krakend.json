@@ -132,7 +132,7 @@
     },
     {
       "endpoint": "/api/ThirdPartyInterface/TPITemplate",
-      "output_encoding": "negotiate",
+      "output_encoding": "string",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
       "method": "GET",
@@ -140,7 +140,7 @@
         {
           "host": ["http://ms-thirdparty:5000"],
           "url_pattern": "api/ThirdPartyInterface/TPITemplate",
-          "encoding": "negotiate",
+          "encoding": "string",
           "method": "GET",
           "extra_config": {}
         }
