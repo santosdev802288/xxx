@@ -78,7 +78,7 @@
     },
     {
       "endpoint": "/api/StaticParameters/columnsThirdParty",
-      "output_encoding": "negotiate",
+      "output_encoding": "string",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
       "method": "GET",
@@ -86,6 +86,7 @@
         {
           "host": ["http://ms-thirdparty:5000"],
           "url_pattern": "api/StaticParameters/columnsThirdParty",
+          "encoding": "string",
           "method": "GET",
           "extra_config": {}
         }
