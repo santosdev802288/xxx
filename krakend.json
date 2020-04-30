@@ -153,6 +153,7 @@
     "github_com/devopsfaith/krakend-cors": {
       "allow_origins": ["http*"],
       "max_age": "12h",
+      "allow_headers": ["*"],
       "allow_methods": [
         "GET",
         "HEAD",
@@ -163,8 +164,7 @@
         "OPTIONS",
         "TRACE",
         "PATCH"
-      ],
-      "allow_credentials": true
+      ]
     }
   },
   "cache_ttl": "300s",
