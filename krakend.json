@@ -103,7 +103,7 @@
       "backend": [
         {
           "host": ["http://ms-thirdparty:5000"],
-          "url_pattern": "api/ThirdPartyInterface",
+          "url_pattern": "api/ThirdPartyInterface/",
           "encoding": "string",
           "method": "POST",
           "extra_config": {}
