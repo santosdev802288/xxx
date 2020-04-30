@@ -95,6 +95,24 @@
       "concurrent_calls": 1
     },
     {
+      "endpoint": "/api/ThirdPartyInterface",
+      "output_encoding": "string",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "POST",
+      "backend": [
+        {
+          "host": ["http://ms-thirdparty:5000"],
+          "url_pattern": "api/ThirdPartyInterface",
+          "encoding": "string",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
       "endpoint": "/api/ThirdPartyInterface/GetFormatsAsync",
       "output_encoding": "string",
       "headers_to_pass": ["*"],
