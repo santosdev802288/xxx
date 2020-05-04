@@ -95,7 +95,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api/ThirdPartyInterface",
+      "endpoint": "/api/ThirdPartyInterface/",
       "output_encoding": "string",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
