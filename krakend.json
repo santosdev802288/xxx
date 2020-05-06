@@ -52,7 +52,7 @@
         {
           "endpoint": "api/third-party/account",
           "output_encoding": "no-op",
-          "headers_to_pass": ["*"],
+          "headers_to_pass": [""],
           "querystring_params": ["*"],
           "method": "PUT",
           "backend": [

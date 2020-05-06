@@ -3,12 +3,16 @@ kind: Gateway
 metadata:
   name: krakend
 spec:
-  selector:
-    istio: ingressgateway
   servers:
     - hosts:
-        - '*'
+        - qak8s.siigo.com
       port:
-        name: http
-        number: 80
-        protocol: HTTP
+        name: https
+        number: 443
+        protocol: HTTPS
+      tls:
+        mode: SIMPLE
+        privateKey: /etc/istio/ingressgateway-certs/tls.key
+        serverCertificate: /etc/istio/ingressgateway-certs/tls.crt
+  selector:
+    istio: ingressgateway
