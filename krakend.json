@@ -1,68 +1,192 @@
 {
-    "version": 2,
-    "name": "KrakenD api gateway to third-party",
-    "port": 8080,
-    "timeout": "10000ms",
-    "endpoints": [
+  "version": 2,
+  "name": "KrakenD api gateway to third-party",
+  "port": 8080,
+  "timeout": "10000ms",
+  "endpoints": [
+    {
+      "endpoint": "/api/third-party/account/{id}",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
         {
-          "endpoint": "api/third-party/account/{id}",
-	      "output_encoding": "no-op",
-          "headers_to_pass": ["*"],
-          "querystring_params": ["*"],
           "method": "GET",
-          "backend": [
-            {
-              "method": "GET",
-              "host": [ "http://ms-thirdparty:5000" ],
-              "url_pattern": "api/third-party/account/{id}",
-              "encoding": "no-op"
-            }
-          ]
-        },
+          "host": ["http://ms-thirdparty:5000"],
+          "url_pattern": "api/third-party/account/{id}",
+          "encoding": "no-op",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/third-party/account/{id}",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "DELETE",
+      "backend": [
         {
-          "endpoint": "api/third-party/account/{id}",
-          "output_encoding": "no-op",
-          "headers_to_pass": ["*"],
-          "querystring_params": ["*"],
           "method": "DELETE",
-          "backend": [
-            {
-              "method": "DELETE",
-              "host": [ "http://ms-thirdparty:5000" ],
-              "url_pattern": "api/third-party/account/{id}",
-              "encoding": "no-op"
-            }
-          ]
-        },
+          "host": ["http://ms-thirdparty:5000"],
+          "url_pattern": "api/third-party/account/{id}",
+          "encoding": "no-op",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/third-party/account",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "POST",
+      "backend": [
         {
-          "endpoint": "api/third-party/account",
-          "output_encoding": "no-op",
-          "headers_to_pass": ["*"],
-          "querystring_params": ["*"],
+          "host": ["http://ms-thirdparty:5000"],
+          "url_pattern": "api/third-party/account",
+          "encoding": "no-op",
           "method": "POST",
-          "backend": [
-            {
-              "host": [ "http://ms-thirdparty:5000" ],
-              "url_pattern": "api/third-party/account",
-              "encoding": "no-op",
-              "method": "POST"
-            }
-          ]
-        },
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/third-party/account",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "PUT",
+      "backend": [
         {
           "endpoint": "api/third-party/account",
           "output_encoding": "no-op",
           "headers_to_pass": [""],
           "querystring_params": ["*"],
+          "host": ["http://ms-thirdparty:5000"],
+          "url_pattern": "api/third-party/account",
+          "encoding": "no-op",
           "method": "PUT",
-          "backend": [
-            {
-              "host": [ "http://ms-thirdparty:5000" ],
-              "url_pattern": "api/third-party/account",
-              "encoding": "no-op",
-              "method": "PUT"
-            }
-          ]
+          "extra_config": {}
         }
-    ]
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/StaticParameters/columnsThirdParty",
+      "output_encoding": "string",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-thirdparty:5000"],
+          "url_pattern": "api/StaticParameters/columnsThirdParty",
+          "encoding": "string",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/ThirdPartyInterface/",
+      "output_encoding": "string",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "POST",
+      "backend": [
+        {
+          "host": ["http://ms-thirdparty:5000"],
+          "url_pattern": "api/ThirdPartyInterface/",
+          "encoding": "string",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/ThirdPartyInterface/GetFormatsAsync",
+      "output_encoding": "string",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "POST",
+      "backend": [
+        {
+          "host": ["http://ms-thirdparty:5000"],
+          "url_pattern": "api/ThirdPartyInterface/GetFormatsAsync",
+          "encoding": "string",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/ThirdPartyInterface/ImportAccountsInterface",
+      "output_encoding": "string",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "POST",
+      "backend": [
+        {
+          "host": ["http://ms-thirdparty:5000"],
+          "url_pattern": "api/ThirdPartyInterface/ImportAccountsInterface",
+          "encoding": "string",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/ThirdPartyInterface/TPITemplate",
+      "output_encoding": "string",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-thirdparty:5000"],
+          "url_pattern": "api/ThirdPartyInterface/TPITemplate",
+          "encoding": "string",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    }
+  ],
+  "extra_config": {
+    "github_com/devopsfaith/krakend-cors": {
+      "allow_origins": ["http*"],
+      "max_age": "12h",
+      "allow_headers": ["*"],
+      "allow_methods": [
+        "GET",
+        "HEAD",
+        "POST",
+        "PUT",
+        "DELETE",
+        "CONNECT",
+        "OPTIONS",
+        "TRACE",
+        "PATCH"
+      ]
+    }
+  }
 }
