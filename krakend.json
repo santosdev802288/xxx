@@ -5,7 +5,7 @@
   "timeout": "10000ms",
   "endpoints": [
     {
-      "endpoint": "/ms-thirdparty",
+      "endpoint": "api/third-party/account/{id}",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -15,7 +15,7 @@
           "sd": "dns",
           "method": "GET",
           "host": [
-            "service-discovery-consul.default.svc.cluster.local"
+            "service-discovery-consul.default.svc.cluster.local:8500"
           ],
           "url_pattern": "api/third-party/account/{id}",
           "encoding": "no-op",
@@ -23,7 +23,9 @@
           "disable_host_sanitize": true
         }
       ],
-      "extra_config": {},
+      "extra_config": {
+
+      },
       "concurrent_calls": 1
     },
     {
