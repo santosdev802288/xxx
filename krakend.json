@@ -83,7 +83,7 @@
     {
       "endpoint": "/api/StaticParameters/columnsThirdParty",
       "output_encoding": "string",
-      "sd": "static",
+      "sd": "ms-thirdparty",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
       "method": "GET",
