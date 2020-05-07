@@ -6,17 +6,17 @@
   "endpoints": [
     {
       "endpoint": "/api/third-party/account/{id}",
+      "url_pattern": "/ms-thirdparty",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
-      "sd": "host",
+      "sd": "static",
       "method": "GET",
       "backend": [
         {
           "method": "GET",
           "host": [
-            "service-discovery-consul.default.svc.cluster.local",
-            "ms-thirdparty"
+            "service-discovery-consul.default.svc.cluster.local"
           ],
           "url_pattern": "api/third-party/account/{id}",
           "encoding": "no-op",
