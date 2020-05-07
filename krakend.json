@@ -12,9 +12,12 @@
       "method": "GET",
       "backend": [
         {
+          "url_pattern": "/ms-thirdparty",
+          "sd": "dns",
           "method": "GET",
-          "host": ["http://ms-thirdparty:5000"],
-          "url_pattern": "api/third-party/account/{id}",
+          "host": [
+            "service-discovery-consul.default.svc.cluster.local"
+          ],
           "encoding": "no-op",
           "extra_config": {}
         }
