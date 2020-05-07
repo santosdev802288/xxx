@@ -5,6 +5,7 @@ trigger:
     include:
       - refs/heads/*
       - master
+      - dev
   paths:
     include:
       - .
