@@ -9,12 +9,15 @@
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
-      "sd": "ms-thirdparty",
+      "sd": "host",
       "method": "GET",
       "backend": [
         {
           "method": "GET",
-          "host": ["service-discovery-consul.default.svc.cluster.local"],
+          "host": [
+            "service-discovery-consul.default.svc.cluster.local",
+            "ms-thirdparty"
+          ],
           "url_pattern": "api/third-party/account/{id}",
           "encoding": "no-op",
           "extra_config": {}
