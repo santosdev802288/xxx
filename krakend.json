@@ -5,15 +5,14 @@
   "timeout": "10000ms",
   "endpoints": [
     {
-      "endpoint": "/api/third-party/account/{id}",
-      "url_pattern": "/ms-thirdparty",
+      "endpoint": "/ms-thirdparty",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
-      "sd": "static",
       "method": "GET",
       "backend": [
         {
+          "sd": "dns",
           "method": "GET",
           "host": [
             "service-discovery-consul.default.svc.cluster.local"
