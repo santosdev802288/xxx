@@ -315,7 +315,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api/product/health",
+      "endpoint": "/api/product/state/health",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
