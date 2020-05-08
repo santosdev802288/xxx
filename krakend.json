@@ -301,13 +301,13 @@
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
-      "method": "DELETE",
+      "method": "GET",
       "backend": [
         {
           "host": ["http://ms-filestorage:5000"],
           "url_pattern": "api/FileStorage/File/guid",
           "encoding": "no-op",
-          "method": "DELETE",
+          "method": "GET",
           "extra_config": {}
         }
       ],
