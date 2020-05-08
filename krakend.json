@@ -313,6 +313,43 @@
       ],
       "extra_config": {},
       "concurrent_calls": 1
+    },
+
+    {
+      "endpoint": "/api/product/health",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-product:5000"],
+          "url_pattern": "health",
+          "encoding": "no-op",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/product/health",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-product:5000"],
+          "url_pattern": "health",
+          "encoding": "no-op",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
     }
   ],
   "extra_config": {
