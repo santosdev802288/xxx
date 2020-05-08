@@ -19,7 +19,9 @@
           ],
           "url_pattern": "api/third-party/account/{id}",
           "encoding": "no-op",
-          "extra_config": {},
+          "extra_config": {
+            "name": "ms-thirdparty"
+          },
           "disable_host_sanitize": true
         }
       ],
