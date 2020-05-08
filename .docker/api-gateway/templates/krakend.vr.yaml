@@ -6,7 +6,7 @@ spec:
   gateways:
     - krakend
   hosts:
-    - '*'
+    - "*"
   http:
     - match:
         - uri:
