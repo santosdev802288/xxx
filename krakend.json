@@ -83,13 +83,12 @@
     {
       "endpoint": "/api/StaticParameters/columnsThirdParty",
       "output_encoding": "string",
-      "sd": "static",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
       "method": "GET",
       "backend": [
         {
-          "host": ["service-discovery-consul.default.svc.cluster.local"],
+          "host": ["http://ms-thirdparty:5000"],
           "url_pattern": "api/StaticParameters/columnsThirdParty",
           "encoding": "string",
           "method": "GET",
