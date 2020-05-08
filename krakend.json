@@ -172,7 +172,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api/FileStorage/swagger",
+      "endpoint": "/api/FileStorage/health",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -180,7 +180,7 @@
       "backend": [
         {
           "host": ["http://ms-filestorage:5000"],
-          "url_pattern": "swagger",
+          "url_pattern": "health",
           "encoding": "no-op",
           "method": "GET",
           "extra_config": {}
@@ -201,24 +201,7 @@
           "url_pattern": "api/FileStorage/File",
           "encoding": "no-op",
           "method": "GET",
-          "extra_config": {
-            "github_com/devopsfaith/krakend-cors": {
-              "allow_origins": ["http*"],
-              "max_age": "12h",
-              "allow_headers": ["*"],
-              "allow_methods": [
-                "GET",
-                "HEAD",
-                "POST",
-                "PUT",
-                "DELETE",
-                "CONNECT",
-                "OPTIONS",
-                "TRACE",
-                "PATCH"
-              ]
-            }
-          }
+          "extra_config": {}
         }
       ],
       "extra_config": {},
