@@ -15,12 +15,11 @@
           "sd": "dns",
           "method": "GET",
           "host": [
-            "service-discovery-consul.default.svc.cluster.local:8500"
+            "service-discovery-consul:8500"
           ],
           "url_pattern": "api/third-party/account/{id}",
           "encoding": "no-op",
           "extra_config": {
-            "name": "ms-thirdparty"
           },
           "disable_host_sanitize": true
         }
