@@ -314,7 +314,6 @@
       "extra_config": {},
       "concurrent_calls": 1
     },
-
     {
       "endpoint": "/api/product/health",
       "output_encoding": "no-op",
@@ -327,6 +326,60 @@
           "url_pattern": "health",
           "encoding": "no-op",
           "method": "GET",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/product/{id}",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-product:5000"],
+          "url_pattern": "/api/product/{id}",
+          "encoding": "no-op",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/product",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "POST",
+      "backend": [
+        {
+          "host": ["http://ms-product:5000"],
+          "url_pattern": "/api/product",
+          "encoding": "no-op",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/product",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "DELETE",
+      "backend": [
+        {
+          "host": ["http://ms-product:5000"],
+          "url_pattern": "/api/product",
+          "encoding": "no-op",
+          "method": "DELETE",
           "extra_config": {}
         }
       ],
