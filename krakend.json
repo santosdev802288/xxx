@@ -315,7 +315,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api/product/state/health",
+      "endpoint": "/api/Catalog/product/state/health",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -333,7 +333,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api/product",
+      "endpoint": "/api/Catalog/product/{id}",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -342,7 +342,7 @@
         {
           "method": "GET",
           "host": ["http://ms-product:5000"],
-          "url_pattern": "api/product}",
+          "url_pattern": "api/product/{id}",
           "encoding": "no-op",
           "extra_config": {}
         }
@@ -351,7 +351,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api/product",
+      "endpoint": "/api/Catalog/product",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -369,7 +369,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api/product",
+      "endpoint": "/api/Catalog/product",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],

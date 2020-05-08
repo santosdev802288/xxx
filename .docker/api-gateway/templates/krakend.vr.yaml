@@ -42,7 +42,7 @@ spec:
               number: 8000
     - match:
         - uri:
-            prefix: /api/product
+            prefix: /api/Catalog
       route:
         - destination:
             host: krakend
