@@ -198,7 +198,7 @@
       "backend": [
         {
           "host": ["http://ms-filestorage:5000"],
-          "url_pattern": "api/File",
+          "url_pattern": "api/FileStorage/File",
           "encoding": "no-op",
           "method": "GET",
           "extra_config": {}
