@@ -333,7 +333,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api/product/{id}",
+      "endpoint": "/api/product",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -342,7 +342,43 @@
         {
           "method": "GET",
           "host": ["http://ms-product:5000"],
-          "url_pattern": "api/product/{id}",
+          "url_pattern": "api/product}",
+          "encoding": "no-op",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/product",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "DELETE",
+      "backend": [
+        {
+          "method": "DELETE",
+          "host": ["http://ms-product:5000"],
+          "url_pattern": "api/product}",
+          "encoding": "no-op",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/product",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "POST",
+      "backend": [
+        {
+          "method": "POST",
+          "host": ["http://ms-product:5000"],
+          "url_pattern": "api/product}",
           "encoding": "no-op",
           "extra_config": {}
         }
