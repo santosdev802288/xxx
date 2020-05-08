@@ -340,10 +340,10 @@
       "method": "GET",
       "backend": [
         {
+          "method": "GET",
           "host": ["http://ms-product:5000"],
           "url_pattern": "api/product/{id}",
           "encoding": "no-op",
-          "method": "GET",
           "extra_config": {}
         }
       ],
