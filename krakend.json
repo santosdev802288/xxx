@@ -21,7 +21,8 @@
           "encoding": "no-op",
           "extra_config": {
           },
-          "disable_host_sanitize": true
+          "disable_host_sanitize": true,
+          "group": "ms-thirdparty"
         }
       ],
       "extra_config": {
