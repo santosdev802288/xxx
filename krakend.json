@@ -15,7 +15,7 @@
           "sd": "dns",
           "method": "GET",
           "host": [
-            "service-discovery-consul:8500"
+            "service-discovery-consul"
           ],
           "url_pattern": "api/third-party/account/{id}",
           "encoding": "no-op",
