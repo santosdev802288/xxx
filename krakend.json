@@ -20,9 +20,12 @@
           "url_pattern": "api/third-party/account/{id}",
           "encoding": "no-op",
           "extra_config": {
+            "https://github.com/devopsfaith/krakend-consul": {
+              "id": "ms-thirdparty",
+              "name": "ms-thirdparty"
+            }
           },
-          "disable_host_sanitize": true,
-          "group": "ms-thirdparty"
+          "disable_host_sanitize": true
         }
       ],
       "extra_config": {
