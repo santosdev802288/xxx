@@ -333,7 +333,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api/Catalog/product/{id}",
+      "endpoint": "/api/Catalog/product",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -341,7 +341,7 @@
       "backend": [
         {
           "host": ["http://ms-product:5000"],
-          "url_pattern": "api/product/{id}",
+          "url_pattern": "api/product",
           "encoding": "no-op",
           "method": "DELETE",
           "extra_config": {}
