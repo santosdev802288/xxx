@@ -12,27 +12,12 @@
       "method": "GET",
       "backend": [
         {
-          "sd": "dns",
           "method": "GET",
-          "host": [
-            "service-discovery-consul"
-          ],
+          "host": [ "http://ms-thirdparty:5000" ],
           "url_pattern": "api/third-party/account/{id}",
-          "encoding": "no-op",
-          "extra_config": {
-            "https://github.com/devopsfaith/krakend-consul": {
-              "id": "ms-thirdparty",
-              "name": "ms-thirdparty",
-              "address": ""
-            }
-          },
-          "disable_host_sanitize": true
+          "encoding": "no-op"
         }
-      ],
-      "extra_config": {
-
-      },
-      "concurrent_calls": 1
+      ]
     },
     {
       "endpoint": "/api/third-party/account/{id}",
@@ -95,13 +80,12 @@
     {
       "endpoint": "/api/StaticParameters/columnsThirdParty",
       "output_encoding": "string",
-      "sd": "ms-thirdparty",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
       "method": "GET",
       "backend": [
         {
-          "host": ["service-discovery-consul.default.svc.cluster.local"],
+          "host": ["http://ms-thirdparty:5000"],
           "url_pattern": "api/StaticParameters/columnsThirdParty",
           "encoding": "string",
           "method": "GET",
