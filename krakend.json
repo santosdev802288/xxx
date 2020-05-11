@@ -166,6 +166,223 @@
       ],
       "extra_config": {},
       "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/FileStorage/health",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-filestorage:5000"],
+          "url_pattern": "health",
+          "encoding": "no-op",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/FileStorage/File",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-filestorage:5000"],
+          "url_pattern": "api/FileStorage/File",
+          "encoding": "no-op",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/FileStorage/File",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "PUT",
+      "backend": [
+        {
+          "host": ["http://ms-filestorage:5000"],
+          "url_pattern": "api/FileStorage/File",
+          "encoding": "no-op",
+          "method": "PUT",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/FileStorage/File",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "POST",
+      "backend": [
+        {
+          "host": ["http://ms-filestorage:5000"],
+          "url_pattern": "api/FileStorage/File",
+          "encoding": "no-op",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/FileStorage/File",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "DELETE",
+      "backend": [
+        {
+          "host": ["http://ms-filestorage:5000"],
+          "url_pattern": "api/FileStorage/File",
+          "encoding": "no-op",
+          "method": "DELETE",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/FileStorage/File/list",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-filestorage:5000"],
+          "url_pattern": "api/FileStorage/File/list",
+          "encoding": "no-op",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/FileStorage/File/list",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "DELETE",
+      "backend": [
+        {
+          "host": ["http://ms-filestorage:5000"],
+          "url_pattern": "api/FileStorage/File/list",
+          "encoding": "no-op",
+          "method": "DELETE",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/FileStorage/File/guid",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-filestorage:5000"],
+          "url_pattern": "api/FileStorage/File/guid",
+          "encoding": "no-op",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/Catalog/product/{id}",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-product:5000"],
+          "url_pattern": "api/product/{id}",
+          "encoding": "no-op",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/Catalog/product",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "DELETE",
+      "backend": [
+        {
+          "host": ["http://ms-product:5000"],
+          "url_pattern": "api/product",
+          "encoding": "no-op",
+          "method": "DELETE",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+
+    {
+      "endpoint": "/api/Catalog/product",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "POST",
+      "backend": [
+        {
+          "host": ["http://ms-product:5000"],
+          "url_pattern": "api/product",
+          "encoding": "no-op",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/product/state/health",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-product:5000"],
+          "url_pattern": "health",
+          "encoding": "no-op",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
     }
   ],
   "extra_config": {

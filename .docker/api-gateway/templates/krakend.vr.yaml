@@ -6,7 +6,7 @@ spec:
   gateways:
     - krakend
   hosts:
-    - "*"
+    - '*'
   http:
     - match:
         - uri:
@@ -27,6 +27,22 @@ spec:
     - match:
         - uri:
             prefix: /api/StaticParameters
+      route:
+        - destination:
+            host: krakend
+            port:
+              number: 8000
+    - match:
+        - uri:
+            prefix: /api/FileStorage
+      route:
+        - destination:
+            host: krakend
+            port:
+              number: 8000
+    - match:
+        - uri:
+            prefix: /api/Catalog
       route:
         - destination:
             host: krakend
