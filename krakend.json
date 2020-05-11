@@ -13,7 +13,7 @@
       "backend": [
         {
           "method": "GET",
-          "host": [ "http://ms-thirdparty:5000" ],
+          "host": ["http://ms-thirdparty:5000"],
           "url_pattern": "api/third-party/account/{id}",
           "encoding": "no-op"
         }
@@ -312,7 +312,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api/Catalog/product/{id}",
+      "endpoint": "/api/Catalog/product/{guid}",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -320,7 +320,7 @@
       "backend": [
         {
           "host": ["http://ms-product:5000"],
-          "url_pattern": "api/product/{id}",
+          "url_pattern": "api/product/{guid}",
           "encoding": "no-op",
           "method": "GET",
           "extra_config": {}
@@ -366,6 +366,25 @@
       "extra_config": {},
       "concurrent_calls": 1
     },
+    {
+      "endpoint": "/api/Catalog/product",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "PUT",
+      "backend": [
+        {
+          "host": ["http://ms-product:5000"],
+          "url_pattern": "api/product",
+          "encoding": "no-op",
+          "method": "PUT",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+
     {
       "endpoint": "/api/product/state/health",
       "output_encoding": "no-op",
