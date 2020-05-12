@@ -56,3 +56,11 @@ spec:
             host: krakend
             port:
               number: 8000
+    - match:
+        - uri:
+            prefix: /api/free-fields
+      route:
+        - destination:
+            host: krakend
+            port:
+              number: 8000
