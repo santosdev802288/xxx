@@ -42,6 +42,14 @@ spec:
               number: 8000
     - match:
         - uri:
+            prefix: /api/vi/documenttype
+      route:
+        - destination:
+            host: krakend
+            port:
+              number: 8000
+    - match:
+        - uri:
             prefix: /api/Catalog
       route:
         - destination:
