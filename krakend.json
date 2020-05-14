@@ -618,7 +618,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "api/search/{resource}}",
+      "endpoint": "api/search/{resource}",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["query","top"],
