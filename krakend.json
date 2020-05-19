@@ -621,7 +621,7 @@
       "endpoint": "api/search/{resource}",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
-      "querystring_params": ["query","top"],
+      "querystring_params": ["query", "top"],
       "method": "GET",
       "backend": [
         {
@@ -638,7 +638,7 @@
   ],
   "extra_config": {
     "github_com/devopsfaith/krakend-cors": {
-      "allow_origins": ["http*"],
+      "allow_origins": [],
       "max_age": "12h",
       "allow_headers": ["*"],
       "allow_methods": [
