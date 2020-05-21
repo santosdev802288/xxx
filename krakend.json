@@ -638,7 +638,7 @@
   ],
   "extra_config": {
     "github_com/devopsfaith/krakend-cors": {
-      "allow_origins": ["http*,*"],
+      "allow_origins": ["http*"],
       "max_age": "12h",
       "allow_headers": ["*"],
       "allow_methods": [
