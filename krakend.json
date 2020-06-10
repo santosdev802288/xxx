@@ -348,6 +348,24 @@
       "concurrent_calls": 1
     },
     {
+      "endpoint": "/api/Catalog/productswagger",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-product:5000"],
+          "url_pattern": "swagger",
+          "encoding": "no-op",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
       "endpoint": "/api/Catalog/product",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
