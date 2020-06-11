@@ -11,9 +11,9 @@ trigger:
       - .
 variables:
   ${{ if eq(variables['Build.SourceBranchName'], 'master') }}:
-    - name: projectName
-      value: api-gateway
-    - group: registry-master
+      - name: projectName
+        value: api-gateway
+      - group: registry-master
 
 #variables:
 # ${{ if eq(variables['Build.SourceBranchName'], 'master') }}:
