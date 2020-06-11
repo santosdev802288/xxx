@@ -13,7 +13,7 @@ trigger:
 variables:
   - name: projectName
     value: api-gateway
-  - group: 'registry-$(Build.SourceBranchName)'
+  - group: "registry-$(Build.SourceBranchName)"
     
 stages:
   - stage: docker
