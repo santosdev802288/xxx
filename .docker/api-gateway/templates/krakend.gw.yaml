@@ -5,7 +5,7 @@ metadata:
 spec:
   servers:
     - hosts:
-        - qak8s.siigo.com
+        - pdk8s.siigo.com
       port:
         name: https
         number: 443
