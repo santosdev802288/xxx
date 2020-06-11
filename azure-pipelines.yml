@@ -9,14 +9,14 @@ trigger:
   paths:
     include:
       - .
-#variables:
-#  - name: projectName
-#    value: api-gateway
-#  - group: registry-master
-
 variables:
-  ${{ if eq(variables['Build.SourceBranchName'], 'master') }}:
-    stageName: ${{ variables['Build.SourceBranchName']}}
+  - name: projectName
+    value: api-gateway
+  - group: registry-${{ variables['Build.SourceBranchName']}}
+
+#variables:
+#  ${{ if eq(variables['Build.SourceBranchName'], 'master') }}:
+#    stageName: ${{ variables['Build.SourceBranchName']}}
     
 
 stages:
