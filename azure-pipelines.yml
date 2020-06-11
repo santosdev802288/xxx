@@ -1,0 +1,42 @@
+trigger:
+
+  batch: true
+  branches:
+    include:
+      - refs/heads/*
+      - master
+      - dev
+  paths:
+    include:
+      - .
+
+variables:
+  - name: projectName
+    value: api-gateway
+  - group: registryQa
+    
+stages:
+  - stage: docker
+    jobs:
+      - job: build
+        timeoutInMinutes: 10
+        steps:
+          - bash: docker build -f $(system.defaultWorkingDirectory)/.docker/Dockerfile -t $(registryServerName)/$(projectName):$(build.buildId) $(system.defaultWorkingDirectory)/
+            displayName: 'docker build and tagged'
+
+          - bash: docker login $(registryServerName) -u $(registryLogin) -p $(registryPassword)
+            displayName: 'ACR login'
+
+          - bash: docker push $(registryServerName)/$(projectName):$(build.buildId)
+            displayName: 'docker push'
+
+          - task: HelmInstaller@1
+            displayName: 'Install Helm'
+            inputs:
+              helmVersionToInstall: 3.0.2
+
+          - bash: helm package --version $(build.buildId) --destination $(build.artifactStagingDirectory) $(system.defaultWorkingDirectory)/.docker/$(projectName)
+            displayName: 'helm package'
+
+          - bash: az acr helm push -n $(registryName) -u $(registryLogin) -p $(registryPassword) $(build.artifactStagingDirectory)/$(projectName)-$(build.buildId).tgz
+            displayName: 'az acr helm push'
