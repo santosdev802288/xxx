@@ -9,14 +9,16 @@ trigger:
   paths:
     include:
       - .
-#variables:
-#  - name: projectName
-#    value: api-gateway
-#  - group: registry-master
-
 variables:
   ${{ if eq(variables['Build.SourceBranchName'], 'master') }}:
-    stageName: prod
+    - name: projectName
+      value: api-gateway
+    - group: registry-master
+
+#variables:
+# ${{ if eq(variables['Build.SourceBranchName'], 'master') }}:
+#    stageName: prod
+
 
 stages:
   - stage: docker
@@ -24,9 +26,6 @@ stages:
       - job: build
         timeoutInMinutes: 10
         steps:
-          - script: echo ${{variables.stageName}}
-            displayName: 'Test'
-
           - bash: docker build -f $(system.defaultWorkingDirectory)/.docker/Dockerfile -t $(registryServerName)/$(projectName):$(build.buildId) $(system.defaultWorkingDirectory)/
             displayName: 'docker build and tagged'
 
