@@ -26,7 +26,7 @@ stages:
               targetType: 'inline'
               script: |
                 # Write your PowerShell commands here.
-                Write-Host $[eq(variables['Build.SourceBranchName'], 'master')]
+                Write-Host eq($(Build.SourceBranchName), 'master')
                 
           - bash: docker build -f $(system.defaultWorkingDirectory)/.docker/Dockerfile -t $(registryServerName)/$(projectName):$(build.buildId) $(system.defaultWorkingDirectory)/
             displayName: 'docker build and tagged'
