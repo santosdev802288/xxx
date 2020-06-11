@@ -9,12 +9,13 @@ trigger:
   paths:
     include:
       - .
+variables:
+  - name: projectName
+    value: api-gateway
 
 variables:
   ${{ if eq(variables['Build.SourceBranchName'], 'master') }}: 
     group: registry-master
-  name: projectName
-  value: api-gateway
 
 stages:
   - stage: docker
