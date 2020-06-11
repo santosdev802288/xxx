@@ -12,10 +12,7 @@ trigger:
 variables:
   - name: projectName
     value: api-gateway
-
-variables:
-  ${{ if eq(variables['Build.SourceBranchName'], 'master') }}: 
-    group: registry-master
+  - group: registry-master
 
 stages:
   - stage: docker
