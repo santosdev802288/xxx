@@ -657,12 +657,30 @@
       "endpoint": "api/search/{resource}",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
-      "querystring_params": ["query", "top"],
+      "querystring_params": ["*"],
       "method": "GET",
       "backend": [
         {
           "host": ["http://ms-autocomplete:5000"],
           "url_pattern": "api/search/{resource}",
+          "encoding": "no-op",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "api/search",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-autocomplete:5000"],
+          "url_pattern": "api/search",
           "encoding": "no-op",
           "method": "GET",
           "extra_config": {}
