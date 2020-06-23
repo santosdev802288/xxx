@@ -20,7 +20,7 @@
       ]
     },
     {
-      "endpoint": "api/third-party/account/relation/{id}",
+      "endpoint": "api/third-party/account/{id}/relation",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -29,7 +29,7 @@
         {
           "method": "GET",
           "host": ["http://ms-thirdparty:5000"],
-          "url_pattern": "api/third-party/account/relation/{id}",
+          "url_pattern": "api/third-party/account/{id}/relation",
           "encoding": "no-op"
         }
       ]
