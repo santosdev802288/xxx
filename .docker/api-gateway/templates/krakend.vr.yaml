@@ -80,3 +80,13 @@ spec:
             host: krakend
             port:
               number: 8000
+    - match:
+        - uri:
+            prefix: /catalog
+      rewrite:
+        uri: /
+      route:
+        - destination:
+            host: {{ .Release.Name }}
+            port:
+              number: 8000
