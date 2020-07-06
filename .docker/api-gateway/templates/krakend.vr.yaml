@@ -9,13 +9,13 @@ spec:
     - '*'
   http:
     - match:
-      - uri:
-          prefix: /health
-    route:
-      - destination:
-          host: krakend
-          port:
-            number: 8000
+        - uri:
+            prefix: /health
+      route:
+        - destination:
+            host: krakend
+            port:
+              number: 8000
     - match:
         - uri:
             prefix: /api/third-party
