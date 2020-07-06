@@ -87,6 +87,6 @@ spec:
         uri: /
       route:
         - destination:
-            host: {{ .Release.Name }}
+            host: krakend
             port:
               number: 8000
