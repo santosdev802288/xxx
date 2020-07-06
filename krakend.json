@@ -5,6 +5,25 @@
   "timeout": "60000ms",
   "endpoints": [
     {
+      "endpoint": "/health",
+      "extra_config": {
+        "github.com/devopsfaith/krakend/proxy": {
+          "static": {
+            "data": {
+              "status": "OK"
+            },
+            "strategy": "always"
+          }
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/",
+          "host": ["http://dummy-url"]
+        }
+      ]
+    },
+    {
       "endpoint": "api/third-party/account/{id}",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
