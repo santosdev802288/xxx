@@ -397,6 +397,24 @@
       "concurrent_calls": 1
     },
     {
+      "endpoint": "/api/Catalog/producttaxdetail",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "POST",
+      "backend": [
+        {
+          "host": ["http://ms-product:5000"],
+          "url_pattern": "api/producttaxdetail",
+          "encoding": "no-op",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
       "endpoint": "/api/Catalog/productswagger",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
