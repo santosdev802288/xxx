@@ -487,6 +487,21 @@
       "concurrent_calls": 1
     },
     {
+      "endpoint": "api/Catalog/product/{ProductId}/relation",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": ["http://ms-product:5000"],
+          "url_pattern": "api/product/{ProductId}/relation",
+          "encoding": "no-op"
+        }
+      ]
+    },
+    {
       "endpoint": "/api/Catalog/productstate",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
