@@ -5,6 +5,25 @@
   "timeout": "60000ms",
   "endpoints": [
     {
+      "endpoint": "/health",
+      "extra_config": {
+        "github.com/devopsfaith/krakend/proxy": {
+          "static": {
+            "data": {
+              "status": "OK"
+            },
+            "strategy": "always"
+          }
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/",
+          "host": ["http://dummy-url"]
+        }
+      ]
+    },
+    {
       "endpoint": "api/third-party/account/{id}",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
@@ -15,6 +34,36 @@
           "method": "GET",
           "host": ["http://ms-thirdparty:5000"],
           "url_pattern": "api/third-party/account/{id}",
+          "encoding": "no-op"
+        }
+      ]
+    },
+    {
+      "endpoint": "api/third-party/account/{id}/relation",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": ["http://ms-thirdparty:5000"],
+          "url_pattern": "api/third-party/account/{id}/relation",
+          "encoding": "no-op"
+        }
+      ]
+    },
+    {
+      "endpoint": "api/third-party/idtypes",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": ["http://ms-thirdparty:5000"],
+          "url_pattern": "api/third-party/idtypes",
           "encoding": "no-op"
         }
       ]
@@ -312,7 +361,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api/Catalog/product/{guid}",
+      "endpoint": "/api/Catalog/product/{id}",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -320,7 +369,7 @@
       "backend": [
         {
           "host": ["http://ms-product:5000"],
-          "url_pattern": "api/product/{guid}",
+          "url_pattern": "api/product/{id}",
           "encoding": "no-op",
           "method": "GET",
           "extra_config": {}
@@ -338,9 +387,27 @@
       "backend": [
         {
           "host": ["http://ms-product:5000"],
-          "url_pattern": "api/tax",
+          "url_pattern": "api/producttax",
           "encoding": "no-op",
           "method": "GET",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/Catalog/producttaxdetail",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "POST",
+      "backend": [
+        {
+          "host": ["http://ms-product:5000"],
+          "url_pattern": "api/producttaxdetail",
+          "encoding": "no-op",
+          "method": "POST",
           "extra_config": {}
         }
       ],
@@ -418,6 +485,21 @@
       ],
       "extra_config": {},
       "concurrent_calls": 1
+    },
+    {
+      "endpoint": "api/Catalog/product/{id}/relation",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": ["http://ms-product:5000"],
+          "url_pattern": "api/product/{id}/relation",
+          "encoding": "no-op"
+        }
+      ]
     },
     {
       "endpoint": "/api/Catalog/productstate",
@@ -564,7 +646,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api/v1/documenttype",
+      "endpoint": "/api/v1/documenttype/{id}",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -572,7 +654,7 @@
       "backend": [
         {
           "host": ["http://ms-document-type:5000"],
-          "url_pattern": "api/v1/documenttype",
+          "url_pattern": "api/v1/documenttype/{id}",
           "encoding": "no-op",
           "method": "DELETE",
           "extra_config": {}
@@ -657,12 +739,30 @@
       "endpoint": "api/search/{resource}",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
-      "querystring_params": ["query", "top"],
+      "querystring_params": ["*"],
       "method": "GET",
       "backend": [
         {
           "host": ["http://ms-autocomplete:5000"],
           "url_pattern": "api/search/{resource}",
+          "encoding": "no-op",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "api/search",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-autocomplete:5000"],
+          "url_pattern": "api/search",
           "encoding": "no-op",
           "method": "GET",
           "extra_config": {}

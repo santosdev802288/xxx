@@ -10,6 +10,14 @@ spec:
   http:
     - match:
         - uri:
+            prefix: /health
+      route:
+        - destination:
+            host: krakend
+            port:
+              number: 8000
+    - match:
+        - uri:
             prefix: /api/third-party
       route:
         - destination:
@@ -67,6 +75,16 @@ spec:
     - match:
         - uri:
             prefix: /api/free-fields
+      route:
+        - destination:
+            host: krakend
+            port:
+              number: 8000
+    - match:
+        - uri:
+            prefix: /catalog
+      rewrite:
+        uri: /
       route:
         - destination:
             host: krakend
