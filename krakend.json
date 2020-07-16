@@ -104,20 +104,16 @@
       "extra_config": {},
       "concurrent_calls": 1
     },
-    {
-      "endpoint": "/api/third-party/account",
+	{
+      "endpoint": "/api/third-party/account/{id}",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
       "method": "PUT",
       "backend": [
         {
-          "endpoint": "api/third-party/account",
-          "output_encoding": "no-op",
-          "headers_to_pass": [""],
-          "querystring_params": ["*"],
           "host": ["http://ms-thirdparty:5000"],
-          "url_pattern": "api/third-party/account",
+          "url_pattern": "api/third-party/account/{id}",
           "encoding": "no-op",
           "method": "PUT",
           "extra_config": {}
