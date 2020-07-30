@@ -141,7 +141,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api/third-party/city/{companyKey}",
+      "endpoint": "/api/third-party/city",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -149,7 +149,7 @@
       "backend": [
         {
           "host": ["http://ms-thirdparty:5000"],
-          "url_pattern": "/api/third-party/city/{companyKey}",
+          "url_pattern": "/api/third-party/city",
           "encoding": "no-op",
           "method": "GET",
           "extra_config": {}
