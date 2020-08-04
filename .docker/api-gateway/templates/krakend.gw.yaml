@@ -5,14 +5,10 @@ metadata:
 spec:
   servers:
     - hosts:
-        - qak8s.siigo.com
+        - '*'
       port:
-        name: https
-        number: 443
-        protocol: HTTPS
-      tls:
-        mode: SIMPLE
-        privateKey: /etc/istio/ingressgateway-certs/tls.key
-        serverCertificate: /etc/istio/ingressgateway-certs/tls.crt
+        name: http
+        number: 80
+        protocol: HTTP
   selector:
     istio: ingressgateway
