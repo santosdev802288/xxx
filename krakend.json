@@ -86,6 +86,24 @@
       "extra_config": {},
       "concurrent_calls": 1
     },
+	{
+      "endpoint": "/api/third-party/contact/{id}/{accountcode}",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "DELETE",
+      "backend": [
+        {
+          "method": "DELETE",
+          "host": ["http://ms-thirdparty:5000"],
+          "url_pattern": "api/third-party/contact/{id}/{accountcode}",
+          "encoding": "no-op",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
     {
       "endpoint": "/api/third-party/account",
       "output_encoding": "no-op",
@@ -104,22 +122,36 @@
       "extra_config": {},
       "concurrent_calls": 1
     },
-    {
-      "endpoint": "/api/third-party/account",
+	{
+      "endpoint": "/api/third-party/account/{id}",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
       "method": "PUT",
       "backend": [
         {
-          "endpoint": "api/third-party/account",
-          "output_encoding": "no-op",
-          "headers_to_pass": [""],
-          "querystring_params": ["*"],
           "host": ["http://ms-thirdparty:5000"],
-          "url_pattern": "api/third-party/account",
+          "url_pattern": "api/third-party/account/{id}",
           "encoding": "no-op",
           "method": "PUT",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/third-party/city",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-thirdparty:5000"],
+          "url_pattern": "/api/third-party/city",
+          "encoding": "no-op",
+          "method": "GET",
           "extra_config": {}
         }
       ],
@@ -361,7 +393,25 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api/Catalog/product/{id}",
+      "endpoint": "/api/product",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-product:5000"],
+          "url_pattern": "api/product",
+          "encoding": "no-op",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/product/{id}",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -379,7 +429,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api/Catalog/producttax",
+      "endpoint": "/api/producttax",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -397,7 +447,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api/Catalog/producttaxdetail",
+      "endpoint": "/api/producttaxdetail",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -415,7 +465,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api/Catalog/productswagger",
+      "endpoint": "/api/productswagger",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -433,7 +483,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api/Catalog/product",
+      "endpoint": "/api/product/{id}",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -441,7 +491,7 @@
       "backend": [
         {
           "host": ["http://ms-product:5000"],
-          "url_pattern": "api/product",
+          "url_pattern": "api/product/{id}",
           "encoding": "no-op",
           "method": "DELETE",
           "extra_config": {}
@@ -451,7 +501,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api/Catalog/product",
+      "endpoint": "/api/product",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -469,7 +519,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api/Catalog/product",
+      "endpoint": "/api/product",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -487,7 +537,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "api/Catalog/product/{id}/relation",
+      "endpoint": "api/product/{id}/relation",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -502,7 +552,37 @@
       ]
     },
     {
-      "endpoint": "/api/Catalog/productstate",
+      "endpoint": "api/product/{id}/balance",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": ["http://ms-product:5000"],
+          "url_pattern": "api/product/{id}/balance",
+          "encoding": "no-op"
+        }
+      ]
+    },
+    {
+      "endpoint": "api/product/{id}/movements",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": ["http://ms-product:5000"],
+          "url_pattern": "api/product/{id}/movements",
+          "encoding": "no-op"
+        }
+      ]
+    },
+    {
+      "endpoint": "/api/productstate",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -716,6 +796,44 @@
       ],
       "extra_config": {},
       "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/measurementunits",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-product:5000"],
+          "url_pattern": "api/measurementunits",
+          "encoding": "no-op",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+
+    },
+    {
+      "endpoint": "/api/measurementunits/{code}",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-product:5000"],
+          "url_pattern": "api/measurementunits/{code}",
+          "encoding": "no-op",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+
     },
     {
       "endpoint": "/api/free-fields/freefields/{id}",
