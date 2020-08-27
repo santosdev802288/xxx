@@ -231,7 +231,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api/ThirdPartyInterface/TPITemplate",
+      "endpoint": "/api/ThirdPartyInterface/TPITemplate/{planType}",
       "output_encoding": "string",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -239,7 +239,7 @@
       "backend": [
         {
           "host": ["http://ms-thirdparty:5000"],
-          "url_pattern": "api/ThirdPartyInterface/TPITemplate",
+          "url_pattern": "api/ThirdPartyInterface/TPITemplate/{planType}",
           "encoding": "string",
           "method": "GET",
           "extra_config": {}
