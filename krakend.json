@@ -105,6 +105,24 @@
       "concurrent_calls": 1
     },
     {
+      "endpoint": "/api/third-party/contact/{id}/{accountcode}",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "DELETE",
+      "backend": [
+        {
+          "method": "DELETE",
+          "host": ["http://ms-thirdparty:5000"],
+          "url_pattern": "api/third-party/contact/{id}/{accountcode}",
+          "encoding": "no-op",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
       "endpoint": "/api/third-party/account",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
@@ -132,6 +150,42 @@
         {
           "host": ["http://ms-thirdparty:5000"],
           "url_pattern": "api/third-party/account/{id}",
+          "encoding": "no-op",
+          "method": "PUT",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+	  {
+      "endpoint": "/api/third-party/contact",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "POST",
+      "backend": [
+        {
+          "host": ["http://host.docker.internal:5000"],
+          "url_pattern": "api/third-party/contact",
+          "encoding": "no-op",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/third-party/contact",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "PUT",
+      "backend": [
+        {
+          "host": ["http://host.docker.internal:5000"],
+          "url_pattern": "api/third-party/contact",
           "encoding": "no-op",
           "method": "PUT",
           "extra_config": {}
