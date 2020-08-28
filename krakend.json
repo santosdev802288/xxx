@@ -166,7 +166,7 @@
       "method": "POST",
       "backend": [
         {
-          "host": ["http://host.docker.internal:5000"],
+          "host": ["http://ms-thirdparty:5000"],
           "url_pattern": "api/third-party/contact",
           "encoding": "no-op",
           "method": "POST",
@@ -184,7 +184,7 @@
       "method": "PUT",
       "backend": [
         {
-          "host": ["http://host.docker.internal:5000"],
+          "host": ["http://ms-thirdparty:5000"],
           "url_pattern": "api/third-party/contact",
           "encoding": "no-op",
           "method": "PUT",
