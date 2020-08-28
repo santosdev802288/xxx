@@ -98,6 +98,42 @@
       "extra_config": {},
       "concurrent_calls": 1
     },
+	  {
+      "endpoint": "/api/third-party/contact",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "POST",
+      "backend": [
+        {
+          "host": ["http://host.docker.internal:5000"],
+          "url_pattern": "api/third-party/contact",
+          "encoding": "no-op",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/third-party/contact",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "PUT",
+      "backend": [
+        {
+          "host": ["http://host.docker.internal:5000"],
+          "url_pattern": "api/third-party/contact",
+          "encoding": "no-op",
+          "method": "PUT",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
     {
       "endpoint": "/api/StaticParameters/columnsThirdParty",
       "output_encoding": "string",
