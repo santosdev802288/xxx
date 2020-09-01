@@ -140,6 +140,42 @@
       "extra_config": {},
       "concurrent_calls": 1
     },
+	  {
+      "endpoint": "/api/third-party/contact",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "POST",
+      "backend": [
+        {
+          "host": ["http://ms-thirdparty:5000"],
+          "url_pattern": "api/third-party/contact",
+          "encoding": "no-op",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/third-party/contact",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "PUT",
+      "backend": [
+        {
+          "host": ["http://ms-thirdparty:5000"],
+          "url_pattern": "api/third-party/contact",
+          "encoding": "no-op",
+          "method": "PUT",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
     {
       "endpoint": "/api/third-party/city",
       "output_encoding": "no-op",
@@ -231,7 +267,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api/ThirdPartyInterface/TPITemplate",
+      "endpoint": "/api/ThirdPartyInterface/TPITemplate/{planType}",
       "output_encoding": "string",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -239,7 +275,7 @@
       "backend": [
         {
           "host": ["http://ms-thirdparty:5000"],
-          "url_pattern": "api/ThirdPartyInterface/TPITemplate",
+          "url_pattern": "api/ThirdPartyInterface/TPITemplate/{planType}",
           "encoding": "string",
           "method": "GET",
           "extra_config": {}
