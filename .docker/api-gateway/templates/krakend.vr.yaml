@@ -26,6 +26,14 @@ spec:
               number: 8000
     - match:
         - uri:
+            prefix: /api/third-party-migration
+      route:
+        - destination:
+            host: krakend
+            port:
+              number: 8000
+    - match:
+        - uri:
             prefix: /api/ThirdPartyInterface
       route:
         - destination:
