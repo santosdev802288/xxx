@@ -1011,6 +1011,24 @@
       ],
       "extra_config": {},
       "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/parameters/city",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-parameters:5000"],
+          "url_pattern": "/api/parameters/city",
+          "encoding": "no-op",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
     }
   ],
   "extra_config": {
