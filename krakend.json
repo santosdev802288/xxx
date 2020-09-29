@@ -1029,6 +1029,60 @@
       ],
       "extra_config": {},
       "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/v1/Autocomplete/GetConfiguration",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "POST",
+      "backend": [
+        {
+          "host": ["http://ms-browser:5000"],
+          "url_pattern": "/api/v1/Autocomplete/GetConfiguration",
+          "encoding": "no-op",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/v1/Autocomplete/GetData",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "POST",
+      "backend": [
+        {
+          "host": ["http://ms-browser:5000"],
+          "url_pattern": "/api/v1/Autocomplete/GetData",
+          "encoding": "no-op",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/v1/Browser/GetDataItemBrowser",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "POST",
+      "backend": [
+        {
+          "host": ["http://ms-browser:5000"],
+          "url_pattern": "/api/v1/Browser/GetDataItemBrowser",
+          "encoding": "no-op",
+          "method": "POST",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1
     }
   ],
   "extra_config": {
