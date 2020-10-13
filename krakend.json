@@ -951,12 +951,9 @@
           "host": ["http://ms-users:5000"],
           "url_pattern": "health",
           "encoding": "no-op",
-          "method": "GET",
-          "extra_config": {}
+          "method": "GET"
         }
-      ],
-      "extra_config": {},
-      "concurrent_calls": 1
+      ]
     },
     {
       "endpoint": "/api/parameters/health",
