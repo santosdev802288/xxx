@@ -2,7 +2,7 @@
   "version": 2,
   "name": "KrakenD api gateway to third-party",
   "port": 8080,
-  "timeout": "60000ms",
+  "timeout": "100000ms",
   "endpoints": [
     {
       "endpoint": "/health",
@@ -269,6 +269,7 @@
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
       "method": "POST",
+      "timeout": "100000ms",
       "backend": [
         {
           "host": ["http://ms-thirdparty:5000"],
@@ -279,7 +280,7 @@
         }
       ],
       "extra_config": {},
-      "concurrent_calls": 1
+      "concurrent_calls": 100
     },
     {
       "endpoint": "/api/ThirdPartyInterface/TPITemplate/{planType}",
