@@ -957,6 +957,21 @@
       ]
     },
     {
+      "endpoint": "/api/users",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-users:5000"],
+          "url_pattern": "users",
+          "encoding": "no-op",
+          "method": "GET"
+        }
+      ]
+    },
+    {
       "endpoint": "/api/parameters/health",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
