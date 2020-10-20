@@ -965,7 +965,7 @@
       "backend": [
         {
           "host": ["http://ms-users:5000"],
-          "url_pattern": "users",
+          "url_pattern": "api/users",
           "encoding": "no-op",
           "method": "GET"
         }
