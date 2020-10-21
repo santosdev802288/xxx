@@ -1116,7 +1116,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api/third-party/fiscal-responsibilities",
+      "endpoint": "api/third-party/fiscal-responsibilities",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -1134,7 +1134,7 @@
       "concurrent_calls": 1 
     },
     {
-      "endpoint": "/api/third-party/fiscal-responsibilities/{code}",
+      "endpoint": "api/third-party/fiscal-responsibilities/{code}",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
