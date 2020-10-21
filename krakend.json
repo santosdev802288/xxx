@@ -280,7 +280,7 @@
         }
       ],
       "extra_config": {},
-      "concurrent_calls": 100
+      "concurrent_calls": 3
     },
     {
       "endpoint": "/api/ThirdPartyInterface/TPITemplate/{planType}",
