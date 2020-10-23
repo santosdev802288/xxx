@@ -2,7 +2,7 @@
   "version": 2,
   "name": "KrakenD api gateway to third-party",
   "port": 8080,
-  "timeout": "60000ms",
+  "timeout": "100000ms",
   "endpoints": [
     {
       "endpoint": "/health",
@@ -269,6 +269,7 @@
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
       "method": "POST",
+      "timeout": "100000ms",
       "backend": [
         {
           "host": ["http://ms-thirdparty:5000"],
@@ -279,7 +280,7 @@
         }
       ],
       "extra_config": {},
-      "concurrent_calls": 1
+      "concurrent_calls": 3
     },
     {
       "endpoint": "/api/ThirdPartyInterface/TPITemplate/{planType}",
@@ -956,6 +957,21 @@
       ]
     },
     {
+      "endpoint": "/api/users",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-users:5000"],
+          "url_pattern": "api/users",
+          "encoding": "no-op",
+          "method": "GET"
+        }
+      ]
+    },
+    {
       "endpoint": "/api/parameters/health",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
@@ -1098,6 +1114,42 @@
       ],
       "extra_config": {},
       "concurrent_calls": 1
+    },
+    {
+      "endpoint": "api/third-party/fiscal-responsibilities",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-thirdparty:5000"],
+          "url_pattern": "api/third-party/fiscal-responsibilities",
+          "encoding": "no-op",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1 
+    },
+    {
+      "endpoint": "api/third-party/fiscal-responsibilities/{code}",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-thirdparty:5000"],
+          "url_pattern": "api/third-party/fiscal-responsibilities/{code}",
+          "encoding": "no-op",
+          "method": "GET",
+          "extra_config": {}
+        }
+      ],
+      "extra_config": {},
+      "concurrent_calls": 1 
     }
   ],
   "extra_config": {
