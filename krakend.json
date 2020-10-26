@@ -1062,7 +1062,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api//payment-types/health",
+      "endpoint": "/api/payment-types/health",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
