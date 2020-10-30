@@ -269,7 +269,7 @@
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
       "method": "POST",
-      "timeout": "100000ms",
+	  "timeout": "100000ms",
       "backend": [
         {
           "host": ["http://ms-thirdparty:5000"],
@@ -280,7 +280,7 @@
         }
       ],
       "extra_config": {},
-      "concurrent_calls": 3
+      "concurrent_calls": 1
     },
     {
       "endpoint": "/api/ThirdPartyInterface/TPITemplate/{planType}",
