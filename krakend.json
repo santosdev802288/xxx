@@ -1092,6 +1092,36 @@
       ]
     },
     {
+      "endpoint": "/api/payment-types",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-payment-types:5000"],
+          "url_pattern": "/api/payment-types",
+          "encoding": "no-op",
+          "method": "GET"
+        }
+      ]
+    },
+    {
+      "endpoint": "/api/payment-types/{id}",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-payment-types:5000"],
+          "url_pattern": "/api/payment-types/{id}",
+          "encoding": "no-op",
+          "method": "GET"
+        }
+      ]
+    },
+    {
       "endpoint": "/api/v1/Autocomplete/GetConfiguration",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
