@@ -667,7 +667,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "api/product/{guid}/warehouses",
+      "endpoint": "api/product/{id}/warehouses",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -675,7 +675,7 @@
       "backend": [
         {
           "host": ["http://ms-product:5000"],
-          "url_pattern": "api/product/{guid}/warehouses",
+          "url_pattern": "api/product/{id}/warehouses",
           "encoding": "no-op",
           "method": "GET"
         }
