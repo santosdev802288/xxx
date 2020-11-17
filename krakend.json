@@ -493,6 +493,21 @@
       "concurrent_calls": 1
     },
     {
+      "endpoint": "/api/product/codes",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-product:5000"],
+          "url_pattern": "api/product/codes",
+          "encoding": "no-op",
+          "method": "GET"
+        }
+      ]
+    },
+    {
       "endpoint": "/api/status/product",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
