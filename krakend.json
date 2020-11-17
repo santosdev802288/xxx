@@ -493,7 +493,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api/product/codes",
+      "endpoint": "/api/products/codes",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
