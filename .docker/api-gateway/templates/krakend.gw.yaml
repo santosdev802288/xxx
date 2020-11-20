@@ -5,10 +5,10 @@ metadata:
 spec:
   servers:
     - hosts:
-        - '*'
+        - "*"
       port:
         name: http
-        number: 80
+        number: 8087
         protocol: HTTP
   selector:
     istio: ingressgateway

@@ -24,6 +24,36 @@
       ]
     },
     {
+      "endpoint": "api/third-party/account",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": ["http://ms-thirdparty:5000"],
+          "url_pattern": "api/third-party/account",
+          "encoding": "no-op"
+        }
+      ]
+    },
+    {
+      "endpoint": "api/third-party/accounts",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": ["http://ms-thirdparty:5000"],
+          "url_pattern": "api/third-party/accounts",
+          "encoding": "no-op"
+        }
+      ]
+    },
+    {
       "endpoint": "api/third-party/account/{id}",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
@@ -269,7 +299,7 @@
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
       "method": "POST",
-      "timeout": "100000ms",
+	  "timeout": "100000ms",
       "backend": [
         {
           "host": ["http://ms-thirdparty:5000"],
@@ -461,6 +491,21 @@
       ],
       "extra_config": {},
       "concurrent_calls": 1
+    },
+    {
+      "endpoint": "/api/products/codes",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-product:5000"],
+          "url_pattern": "api/product/codes",
+          "encoding": "no-op",
+          "method": "GET"
+        }
+      ]
     },
     {
       "endpoint": "/api/status/product",
@@ -665,6 +710,21 @@
       ],
       "extra_config": {},
       "concurrent_calls": 1
+    },
+    {
+      "endpoint": "api/product/{id}/warehouses",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-product:5000"],
+          "url_pattern": "api/product/{id}/warehouses",
+          "encoding": "no-op",
+          "method": "GET"
+        }
+      ]
     },
     {
       "endpoint": "/api/v1/documenttype/health",
@@ -1077,7 +1137,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api/payment-types/health",
+      "endpoint": "/api/status/payment-types",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -1086,6 +1146,36 @@
         {
           "host": ["http://ms-payment-types:5000"],
           "url_pattern": "health",
+          "encoding": "no-op",
+          "method": "GET"
+        }
+      ]
+    },
+    {
+      "endpoint": "/api/payment-types",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-payment-types:5000"],
+          "url_pattern": "/api/payment-types",
+          "encoding": "no-op",
+          "method": "GET"
+        }
+      ]
+    },
+    {
+      "endpoint": "/api/payment-types/{id}",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "GET",
+      "backend": [
+        {
+          "host": ["http://ms-payment-types:5000"],
+          "url_pattern": "/api/payment-types/{id}",
           "encoding": "no-op",
           "method": "GET"
         }
