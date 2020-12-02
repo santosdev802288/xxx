@@ -2,7 +2,7 @@
   "version": 2,
   "name": "KrakenD api gateway to third-party",
   "port": 8080,
-  "timeout": "100000ms",
+  "timeout": "350s",
   "endpoints": [
     {
       "endpoint": "/health",
