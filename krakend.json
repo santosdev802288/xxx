@@ -247,7 +247,7 @@
       "method": "GET",
       "backend": [
         {
-          "host": ["http://ms-thirdparty:5000"],
+          "host": ["http://ms-thirdparty-interface:5000"],
           "url_pattern": "api/StaticParameters/columnsThirdParty",
           "encoding": "string",
           "method": "GET",
@@ -265,7 +265,7 @@
       "method": "POST",
       "backend": [
         {
-          "host": ["http://ms-thirdparty:5000"],
+          "host": ["http://ms-thirdparty-interface:5000"],
           "url_pattern": "api/ThirdPartyInterface/",
           "encoding": "string",
           "method": "POST",
@@ -283,7 +283,7 @@
       "method": "POST",
       "backend": [
         {
-          "host": ["http://ms-thirdparty:5000"],
+          "host": ["http://ms-thirdparty-interface:5000"],
           "url_pattern": "api/ThirdPartyInterface/GetFormatsAsync",
           "encoding": "string",
           "method": "POST",
@@ -302,7 +302,7 @@
 	  "timeout": "100000ms",
       "backend": [
         {
-          "host": ["http://ms-thirdparty:5000"],
+          "host": ["http://ms-thirdparty-interface:5000"],
           "url_pattern": "api/ThirdPartyInterface/ImportAccountsInterface",
           "encoding": "string",
           "method": "POST",
@@ -320,7 +320,7 @@
       "method": "GET",
       "backend": [
         {
-          "host": ["http://ms-thirdparty:5000"],
+          "host": ["http://ms-thirdparty-interface:5000"],
           "url_pattern": "api/ThirdPartyInterface/TPITemplate/{planType}",
           "encoding": "string",
           "method": "GET",
