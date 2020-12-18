@@ -541,6 +541,21 @@
       "concurrent_calls": 1
     },
     {
+      "endpoint": "/api/products/SaveList",
+      "output_encoding": "no-op",
+      "headers_to_pass": ["*"],
+      "querystring_params": ["*"],
+      "method": "POST",
+      "backend": [
+        {
+          "host": ["http://ms-product:5000"],
+          "url_pattern": "api/product/SaveList",
+          "encoding": "no-op",
+          "method": "POST"
+        }
+      ]
+    },
+    {
       "endpoint": "/api/producttax",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
