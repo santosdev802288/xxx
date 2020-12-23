@@ -541,7 +541,7 @@
       "concurrent_calls": 1
     },
     {
-      "endpoint": "/api/products/SaveList",
+      "endpoint": "/api/product/SaveList",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
