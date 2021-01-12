@@ -1096,7 +1096,7 @@
       ]
     },
     {
-      "endpoint": "/api/users/ids",
+      "endpoint": "/api/search/users/ids",
       "output_encoding": "no-op",
       "headers_to_pass": ["*"],
       "querystring_params": ["*"],
@@ -1104,7 +1104,7 @@
       "backend": [
         {
           "host": ["http://ms-users:5000"],
-          "url_pattern": "api/users/ids",
+          "url_pattern": "/api/search/users/ids",
           "encoding": "no-op",
           "method": "GET",
           "extra_config": {}
