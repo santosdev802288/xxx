@@ -1075,7 +1075,7 @@
       "backend": [
         {
           "host": ["http://ms-autocompletesearch:5000"],
-          "url_pattern": "api/search/{resource}",
+          "url_pattern": "{resource}",
           "encoding": "no-op",
           "method": "GET",
           "extra_config": {}
@@ -1093,7 +1093,7 @@
       "backend": [
         {
           "host": ["http://ms-autocompletesearch:5000"],
-          "url_pattern": "api/search",
+          "url_pattern": "third-party",
           "encoding": "no-op",
           "method": "GET",
           "extra_config": {}
