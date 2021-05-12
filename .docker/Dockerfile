@@ -27,5 +27,3 @@ RUN adduser --disabled-password --gecos "" app -u 1000
 USER 1000
 
 COPY krakend.json /etc/krakend/krakend.json
-
-ENTRYPOINT [ "/bin/bash" ]
