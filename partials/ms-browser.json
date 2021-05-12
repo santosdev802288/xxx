@@ -10,7 +10,15 @@
         "url_pattern": "/api/v1/Autocomplete/GetConfiguration",
         "encoding": "no-op",
         "method": "POST",
-        "extra_config": {}
+        "extra_config": {
+          "github.com/devopsfaith/krakend-circuitbreaker/gobreaker": {
+            "interval": 120,
+            "timeout": 30,
+            "maxErrors": 100,
+            "name": "ms-browser-GetConfiguration-POST",
+            "logStatusChange": true
+            }
+        }
       }
     ],
     "extra_config": {},
@@ -28,7 +36,15 @@
         "url_pattern": "/api/v1/Autocomplete/GetData",
         "encoding": "no-op",
         "method": "POST",
-        "extra_config": {}
+        "extra_config": {
+          "github.com/devopsfaith/krakend-circuitbreaker/gobreaker": {
+          "interval": 120,
+          "timeout": 30,
+          "maxErrors": 150,
+          "name": "ms-browser-GetData-POST",
+          "logStatusChange": true
+          }
+        }
       }
     ],
     "extra_config": {},
@@ -46,7 +62,15 @@
         "url_pattern": "/api/v1/Browser/GetDataItemBrowser",
         "encoding": "no-op",
         "method": "POST",
-        "extra_config": {}
+        "extra_config": {
+          "github.com/devopsfaith/krakend-circuitbreaker/gobreaker": {
+            "interval": 120,
+            "timeout": 30,
+            "maxErrors": 100,
+            "name": "ms-browser-GetDataItemBrowser-POST",
+            "logStatusChange": true
+            }
+        }
       }
     ],
     "extra_config": {},
