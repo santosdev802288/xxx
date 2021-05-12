@@ -1,0 +1,91 @@
+{
+    "endpoint": "/api/StaticParameters/columnsThirdParty",
+    "output_encoding": "string",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-thirdparty-interface:5000"],
+        "url_pattern": "api/StaticParameters/columnsThirdParty",
+        "encoding": "string",
+        "method": "GET",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  },
+  {
+    "endpoint": "/api/ThirdPartyInterface/",
+    "output_encoding": "string",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "POST",
+    "backend": [
+      {
+        "host": ["http://ms-thirdparty-interface:5000"],
+        "url_pattern": "api/ThirdPartyInterface/",
+        "encoding": "string",
+        "method": "POST",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  },
+  {
+    "endpoint": "/api/ThirdPartyInterface/GetFormatsAsync",
+    "output_encoding": "string",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "POST",
+    "backend": [
+      {
+        "host": ["http://ms-thirdparty-interface:5000"],
+        "url_pattern": "api/ThirdPartyInterface/GetFormatsAsync",
+        "encoding": "string",
+        "method": "POST",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  },
+  {
+    "endpoint": "/api/ThirdPartyInterface/ImportAccountsInterface",
+    "output_encoding": "string",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "POST",
+    "timeout": "100000ms",
+    "backend": [
+      {
+        "host": ["http://ms-thirdparty-interface:5000"],
+        "url_pattern": "api/ThirdPartyInterface/ImportAccountsInterface",
+        "encoding": "string",
+        "method": "POST",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  },
+  {
+    "endpoint": "/api/ThirdPartyInterface/TPITemplate/{planType}",
+    "output_encoding": "string",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-thirdparty-interface:5000"],
+        "url_pattern": "api/ThirdPartyInterface/TPITemplate/{planType}",
+        "encoding": "string",
+        "method": "GET",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  }
