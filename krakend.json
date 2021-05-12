@@ -18,8 +18,10 @@
       },
       "backend": [
         {
-          "url_pattern": "/",
-          "host": ["http://dummy-url"]
+          "url_pattern": "api/healthprobe/healthcheck",
+          "host": [
+            "http://ms-healthprobe.siigo-configuration.svc.cluster.local:5000"
+          ]
         }
       ]
     },
