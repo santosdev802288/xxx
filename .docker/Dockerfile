@@ -24,6 +24,8 @@ RUN apt-get install procps -y
 RUN apt-get install net-tools -y
 
 RUN adduser --disabled-password --gecos "" app -u 1000
+RUN chown -R 1000:1000 /app
+
 USER 1000
 
 COPY krakend.json /etc/krakend/krakend.json
