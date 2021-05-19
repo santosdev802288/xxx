@@ -118,7 +118,7 @@ siigo-chart:
     # This bool directly controls whether the no_new_privs flag gets set on the container process.
     # AllowPrivilegeEscalation is true always when the container is: 1) run as Privileged OR 2) has CAP_SYS_ADMIN.
     allowPrivilegeEscalation: false
-    readOnlyRootFilesystem: false #  Mounts the container's root filesystem as read-only.
+    readOnlyRootFilesystem: true #  Mounts the container's root filesystem as read-only.
     runAsNonRoot: true
     runAsUser: 1000
 

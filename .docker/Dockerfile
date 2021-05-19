@@ -1,16 +1,16 @@
 FROM devopsfaith/krakend:1.1.1
 
-WORKDIR /etc/krakend/
+WORKDIR /app
 
 COPY ./partials ./partials
 # COPY ./settings ./settings
 # COPY ./templates ./templates
 
 ENV FC_ENABLE=1
-ENV FC_PARTIALS="/etc/krakend/partials"
-# ENV FC_SETTINGS="/etc/krakend/settings"
-# ENV FC_TEMPLATES="/etc/krakend/templates"
-# ENV FC_OUT="/out.json" 
+ENV FC_PARTIALS="/app/partials"
+# ENV FC_SETTINGS="/app/settings"
+# ENV FC_TEMPLATES="/app/templates"
+# ENV FC_OUT="/app/out.json" 
 
 USER root
 
