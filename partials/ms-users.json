@@ -1,0 +1,61 @@
+{
+    "endpoint": "/api/status/users",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-users:5000"],
+        "url_pattern": "health",
+        "encoding": "no-op",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/users",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-users:5000"],
+        "url_pattern": "api/users",
+        "encoding": "no-op",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/users/{id}",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-users:5000"],
+        "url_pattern": "api/users/{id}",
+        "encoding": "no-op",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/find/users/ids",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-users:5000"],
+        "url_pattern": "/api/find/users/ids",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {}
+      }
+    ]
+  }

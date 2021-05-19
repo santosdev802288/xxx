@@ -1,0 +1,138 @@
+{
+    "endpoint": "/api/parameters/health",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-parameters:5000"],
+        "url_pattern": "health",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  },
+  {
+    "endpoint": "/api/parameters/currencies",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-parameters:5000"],
+        "url_pattern": "/api/parameters/currencies",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  },
+  {
+    "endpoint": "/api/parameters/currencies/{code}",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-parameters:5000"],
+        "url_pattern": "/api/parameters/currencies/{code}",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  },
+  {
+    "endpoint": "/api/parameters/id-types",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-parameters:5000"],
+        "url_pattern": "/api/parameters/id-types",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  },
+  {
+    "endpoint": "/api/parameters/id-types/ids",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-parameters:5000"],
+        "url_pattern": "/api/parameters/id-types/ids",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {}
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/parameters/cities",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-parameters:5000"],
+        "url_pattern": "/api/parameters/cities",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  },
+  {
+    "endpoint": "/api/parameters/cities/ids",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-parameters:5000"],
+        "url_pattern": "/api/parameters/cities/ids",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {}
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/parameters/accounts",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-parameters:5000"],
+        "url_pattern": "/api/parameters/accounts",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {}
+      }
+    ]
+  }
