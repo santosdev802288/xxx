@@ -25,6 +25,7 @@
         }
       ]
     },
+    
     {{ include "ms-thirdparty.json" }},
     {{ include "ms-thirdparty-interface.json" }},
     {{ include "ms-filestorage.json" }},
