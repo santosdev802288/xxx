@@ -150,7 +150,8 @@
         "method": "GET",
         "extra_config": {}
       }
-    ]
+    ],
+    "extra_config": {}
   },
   {
     "endpoint": "/api/parameters/asset-groups",
@@ -166,5 +167,6 @@
         "method": "GET",
         "extra_config": {}
       }
-    ]
+    ],
+    "extra_config": {}
   }
