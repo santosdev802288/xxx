@@ -135,4 +135,36 @@
         "extra_config": {}
       }
     ]
+  },
+  {
+    "endpoint": "/api/parameters/fixed-assets",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-parameters:5000"],
+        "url_pattern": "/api/parameters/fixed-assets",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {}
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/parameters/asset-groups",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-parameters:5000"],
+        "url_pattern": "/api/parameters/asset-groups",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {}
+      }
+    ]
   }
