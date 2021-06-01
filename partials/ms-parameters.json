@@ -151,7 +151,8 @@
         "extra_config": {}
       }
     ],
-    "extra_config": {}
+    "extra_config": {},
+    "concurrent_calls": 1
   },
   {
     "endpoint": "/api/parameters/asset-groups",
@@ -168,5 +169,6 @@
         "extra_config": {}
       }
     ],
-    "extra_config": {}
+    "extra_config": {},
+    "concurrent_calls": 1
   }
