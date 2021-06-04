@@ -1,8 +1,6 @@
 trigger:
   - dev
-  - develop
   - master
-  - cicd
 
 resources:
   repositories:

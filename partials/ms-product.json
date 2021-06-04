@@ -1,0 +1,339 @@
+{
+    "endpoint": "/api/product",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-product:5000"],
+        "url_pattern": "api/product",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  },
+  {
+    "endpoint": "/api/products/codes",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-product:5000"],
+        "url_pattern": "api/product/codes",
+        "encoding": "no-op",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/status/product",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-product:5000"],
+        "url_pattern": "health",
+        "encoding": "no-op",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/product/{id}",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-product:5000"],
+        "url_pattern": "api/product/{id}",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  },
+  {
+    "endpoint": "/api/product/SaveList",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "POST",
+    "backend": [
+      {
+        "host": ["http://ms-product:5000"],
+        "url_pattern": "api/product/SaveList",
+        "encoding": "no-op",
+        "method": "POST"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/producttax",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-product:5000"],
+        "url_pattern": "api/producttax",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  },
+  {
+    "endpoint": "/api/producttaxdetail",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "POST",
+    "backend": [
+      {
+        "host": ["http://ms-product:5000"],
+        "url_pattern": "api/producttaxdetail",
+        "encoding": "no-op",
+        "method": "POST",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  },
+  {
+    "endpoint": "/api/productswagger",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-product:5000"],
+        "url_pattern": "swagger",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  },
+  {
+    "endpoint": "/api/product/{id}",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "DELETE",
+    "backend": [
+      {
+        "host": ["http://ms-product:5000"],
+        "url_pattern": "api/product/{id}",
+        "encoding": "no-op",
+        "method": "DELETE",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  },
+  {
+    "endpoint": "/api/product",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "POST",
+    "backend": [
+      {
+        "host": ["http://ms-product:5000"],
+        "url_pattern": "api/product",
+        "encoding": "no-op",
+        "method": "POST",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  },
+  {
+    "endpoint": "/api/product",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "PUT",
+    "backend": [
+      {
+        "host": ["http://ms-product:5000"],
+        "url_pattern": "api/product",
+        "encoding": "no-op",
+        "method": "PUT",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  },
+  {
+    "endpoint": "api/product/{id}/relation",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "method": "GET",
+        "host": ["http://ms-product:5000"],
+        "url_pattern": "api/product/{id}/relation",
+        "encoding": "no-op"
+      }
+    ]
+  },
+  {
+    "endpoint": "api/product/{id}/balance",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "method": "GET",
+        "host": ["http://ms-product:5000"],
+        "url_pattern": "api/product/{id}/balance",
+        "encoding": "no-op"
+      }
+    ]
+  },
+  {
+    "endpoint": "api/product/{id}/movements",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "method": "GET",
+        "host": ["http://ms-product:5000"],
+        "url_pattern": "api/product/{id}/movements",
+        "encoding": "no-op"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/productstate",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-product:5000"],
+        "url_pattern": "health",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  },
+  {
+    "endpoint": "api/product/{id}/warehouses",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-product:5000"],
+        "url_pattern": "api/product/{id}/warehouses",
+        "encoding": "no-op",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/migration",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-product:5000"],
+        "url_pattern": "api/migration",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {}
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/measurementunits",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-product:5000"],
+        "url_pattern": "api/measurementunits",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+
+  },
+  {
+    "endpoint": "/api/measurementunits/{code}",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-product:5000"],
+        "url_pattern": "api/measurementunits/{code}",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+
+  },
+  {
+    "endpoint": "/api/measurementunit/{id}",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-product:5000"],
+        "url_pattern": "api/measurementunit/{id}",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  }

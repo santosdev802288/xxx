@@ -14,4 +14,4 @@ extends:
     projectName: api-gateway-catalog
     environment: aks
     namespace: siigo-catalog
-    country: cl
+    country: mx
