@@ -1,0 +1,342 @@
+{
+  "endpoint": "api/third-party/account",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "GET",
+  "backend": [
+    {
+      "method": "GET",
+      "host": ["http://ms-thirdparty:5000"],
+      "url_pattern": "api/third-party/account",
+      "encoding": "no-op"
+    }
+  ]
+},
+{
+  "endpoint": "api/third-party/accounts",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "GET",
+  "backend": [
+    {
+      "method": "GET",
+      "host": ["http://ms-thirdparty:5000"],
+      "url_pattern": "api/third-party/accounts",
+      "encoding": "no-op"
+    }
+  ]
+},
+{
+  "endpoint": "api/third-party/account/{id}",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "GET",
+  "backend": [
+    {
+      "method": "GET",
+      "host": ["http://ms-thirdparty:5000"],
+      "url_pattern": "api/third-party/account/{id}",
+      "encoding": "no-op"
+    }
+  ]
+},
+{
+  "endpoint": "api/third-party/account/{id}/relation",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "GET",
+  "backend": [
+    {
+      "method": "GET",
+      "host": ["http://ms-thirdparty:5000"],
+      "url_pattern": "api/third-party/account/{id}/relation",
+      "encoding": "no-op"
+    }
+  ]
+},
+{
+  "endpoint": "api/third-party-migration/resultmt/{id}",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "GET",
+  "backend": [
+    {
+      "method": "GET",
+      "host": ["http://ms-thirdparty:5000"],
+      "url_pattern": "api/migration/resultmt/{id}",
+      "encoding": "no-op"
+    }
+  ]
+},
+{
+  "endpoint": "api/third-party/idtypes",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "GET",
+  "backend": [
+    {
+      "method": "GET",
+      "host": ["http://ms-thirdparty:5000"],
+      "url_pattern": "api/third-party/idtypes",
+      "encoding": "no-op"
+    }
+  ]
+},
+{
+  "endpoint": "/api/third-party/account/{id}",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "DELETE",
+  "backend": [
+    {
+      "method": "DELETE",
+      "host": ["http://ms-thirdparty:5000"],
+      "url_pattern": "api/third-party/account/{id}",
+      "encoding": "no-op",
+      "extra_config": {}
+    }
+  ],
+  "extra_config": {},
+  "concurrent_calls": 1
+},
+{
+  "endpoint": "/api/third-party/contact/{id}/{accountcode}",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "DELETE",
+  "backend": [
+    {
+      "method": "DELETE",
+      "host": ["http://ms-thirdparty:5000"],
+      "url_pattern": "api/third-party/contact/{id}/{accountcode}",
+      "encoding": "no-op",
+      "extra_config": {}
+    }
+  ],
+  "extra_config": {},
+  "concurrent_calls": 1
+},
+{
+  "endpoint": "/api/third-party/account",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "POST",
+  "backend": [
+    {
+      "host": ["http://ms-thirdparty:5000"],
+      "url_pattern": "api/third-party/account",
+      "encoding": "no-op",
+      "method": "POST",
+      "extra_config": {}
+    }
+  ],
+  "extra_config": {},
+  "concurrent_calls": 1
+},
+{
+  "endpoint": "/api/third-party/account/{id}",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "PUT",
+  "backend": [
+    {
+      "host": ["http://ms-thirdparty:5000"],
+      "url_pattern": "api/third-party/account/{id}",
+      "encoding": "no-op",
+      "method": "PUT",
+      "extra_config": {}
+    }
+  ],
+  "extra_config": {},
+  "concurrent_calls": 1
+},
+{
+  "endpoint": "/api/third-party/contact",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "POST",
+  "backend": [
+    {
+      "host": ["http://ms-thirdparty:5000"],
+      "url_pattern": "api/third-party/contact",
+      "encoding": "no-op",
+      "method": "POST",
+      "extra_config": {}
+    }
+  ],
+  "extra_config": {},
+  "concurrent_calls": 1
+},
+{
+  "endpoint": "/api/third-party/contact",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "PUT",
+  "backend": [
+    {
+      "host": ["http://ms-thirdparty:5000"],
+      "url_pattern": "api/third-party/contact",
+      "encoding": "no-op",
+      "method": "PUT",
+      "extra_config": {}
+    }
+  ],
+  "extra_config": {},
+  "concurrent_calls": 1
+},
+{
+  "endpoint": "/api/third-party/city",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "GET",
+  "backend": [
+    {
+      "host": ["http://ms-thirdparty:5000"],
+      "url_pattern": "/api/third-party/city",
+      "encoding": "no-op",
+      "method": "GET",
+      "extra_config": {}
+    }
+  ],
+  "extra_config": {},
+  "concurrent_calls": 1
+},
+{
+  "endpoint": "/api/free-fields/freefields",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "POST",
+  "backend": [
+    {
+      "host": ["http://ms-thirdparty:5000"],
+      "url_pattern": "api/free-fields/freefields",
+      "encoding": "no-op",
+      "method": "POST",
+      "extra_config": {}
+    }
+  ],
+  "extra_config": {},
+  "concurrent_calls": 1
+},
+{
+  "endpoint": "/api/free-fields/freefields",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "GET",
+  "backend": [
+    {
+      "host": ["http://ms-thirdparty:5000"],
+      "url_pattern": "api/free-fields/freefields",
+      "encoding": "no-op",
+      "method": "GET",
+      "extra_config": {}
+    }
+  ],
+  "extra_config": {},
+  "concurrent_calls": 1
+},
+{
+  "endpoint": "/api/free-fields/freefields",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "PUT",
+  "backend": [
+    {
+      "host": ["http://ms-thirdparty:5000"],
+      "url_pattern": "api/free-fields/freefields",
+      "encoding": "no-op",
+      "method": "PUT",
+      "extra_config": {}
+    }
+  ],
+  "extra_config": {},
+  "concurrent_calls": 1
+},
+{
+  "endpoint": "/api/free-fields/freefields/{id}",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "DELETE",
+  "backend": [
+    {
+      "host": ["http://ms-thirdparty:5000"],
+      "url_pattern": "api/free-fields/freefields/{id}",
+      "encoding": "no-op",
+      "method": "DELETE",
+      "extra_config": {}
+    }
+  ],
+  "extra_config": {},
+  "concurrent_calls": 1
+},
+{
+  "endpoint": "api/third-party/fiscal-responsibilities",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "GET",
+  "backend": [
+    {
+      "host": ["http://ms-thirdparty:5000"],
+      "url_pattern": "api/third-party/fiscal-responsibilities",
+      "encoding": "no-op",
+      "method": "GET",
+      "extra_config": {}
+    }
+  ],
+  "extra_config": {},
+  "concurrent_calls": 1
+},
+{
+  "endpoint": "api/third-party/fiscal-responsibilities/{code}",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "GET",
+  "backend": [
+    {
+      "host": ["http://ms-thirdparty:5000"],
+      "url_pattern": "api/third-party/fiscal-responsibilities/{code}",
+      "encoding": "no-op",
+      "method": "GET",
+      "extra_config": {}
+    }
+  ],
+  "extra_config": {},
+  "concurrent_calls": 1
+},
+{
+    "endpoint": "/api/third-party/accounts/DeleteAllAccounts",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "DELETE",
+    "backend": [
+      {
+        "method": "DELETE",
+        "host": ["http://ms-thirdparty:5000"],
+        "url_pattern": "api/third-party/accounts/DeleteAllAccounts",
+        "encoding": "no-op",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  }

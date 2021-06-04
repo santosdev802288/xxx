@@ -15,7 +15,6 @@ siigo-chart:
   envs: {}
     # ASPNETCORE_ENVIRONMENT: Development
 
-
   apiGateway:
     enabled: true
 
@@ -93,8 +92,8 @@ siigo-chart:
     initialDelaySeconds: 5 # Number of seconds after the container has started before liveness or readiness probes are initiated. Defaults to 0 seconds.
 
   hpa:
-    maxReplicas: 10
-    minReplicas: 3
+    maxReplicas: 2
+    minReplicas: 1
     targetCPUUtilizationPercentage: 70
 
   # We usually recommend not to specify default resources and to leave this as a conscious
