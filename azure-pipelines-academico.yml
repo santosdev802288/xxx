@@ -1,0 +1,17 @@
+trigger:
+  - master
+
+resources:
+  repositories:
+    - repository: Pipelines
+      type: git
+      name: "Siigo/Siigo.Pipeline"
+      ref: refs/heads/dev
+
+extends:
+  template: gateway/gateway-pipeline.yaml@Pipelines
+  parameters:
+    projectName: api-gateway-catalog
+    environment: aks
+    namespace: siigo-catalog
+    country: academico
