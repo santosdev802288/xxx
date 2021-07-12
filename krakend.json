@@ -35,7 +35,8 @@
     {{ include "ms-users.json" }},
     {{ include "ms-parameters.json" }},
     {{ include "ms-payment-types.json" }},
-    {{ include "ms-browser.json" }}
+    {{ include "ms-browser.json" }},
+    {{ include "ms-import-products.json" }}
 
   ],
   "extra_config": {
