@@ -1,0 +1,114 @@
+{
+    "endpoint": "/api/info",
+    "output_encoding": "no-op",
+    "headers_to_pass": [ "*" ],
+    "querystring_params": [ "*" ],
+    "method": "GET",
+    "backend": [
+        {
+            "host": [ "http://ms-openapi:5000" ],
+            "url_pattern": "api/info",
+            "encoding": "no-op",
+            "method": "GET",
+            "extra_config": {}
+        }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+
+},
+{
+    "endpoint": "/api/swagger-ui.css",
+    "output_encoding": "no-op",
+    "headers_to_pass": [ "*" ],
+    "querystring_params": [ "*" ],
+    "method": "GET",
+    "backend": [
+        {
+            "host": [ "http://ms-openapi:5000" ],
+            "url_pattern": "api/info/swagger-ui.css",
+            "encoding": "no-op",
+            "method": "GET",
+            "extra_config": {}
+        }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+
+},
+{
+    "endpoint": "/api/swagger-ui-bundle.js",
+    "output_encoding": "no-op",
+    "headers_to_pass": [ "*" ],
+    "querystring_params": [ "*" ],
+    "method": "GET",
+    "backend": [
+        {
+            "host": [ "http://ms-openapi:5000" ],
+            "url_pattern": "api/info/swagger-ui-bundle.js",
+            "encoding": "no-op",
+            "method": "GET",
+            "extra_config": {}
+        }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+
+},
+{
+    "endpoint": "/api/swagger-ui-standalone-preset.js",
+    "output_encoding": "no-op",
+    "headers_to_pass": [ "*" ],
+    "querystring_params": [ "*" ],
+    "method": "GET",
+    "backend": [
+        {
+            "host": [ "http://ms-openapi:5000" ],
+            "url_pattern": "api/info/swagger-ui-standalone-preset.js",
+            "encoding": "no-op",
+            "method": "GET",
+            "extra_config": {}
+        }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+
+},
+{
+    "endpoint": "/api/favicon.ico",
+    "output_encoding": "no-op",
+    "headers_to_pass": [ "*" ],
+    "querystring_params": [ "*" ],
+    "method": "GET",
+    "backend": [
+        {
+            "host": [ "http://ms-openapi:5000" ],
+            "url_pattern": "api/info/favicon.ico",
+            "encoding": "no-op",
+            "method": "GET",
+            "extra_config": {}
+        }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+
+},
+{
+    "endpoint": "/api/docs/{version}/{api}",
+    "output_encoding": "no-op",
+    "headers_to_pass": [ "*" ],
+    "querystring_params": [ "*" ],
+    "method": "GET",
+    "backend": [
+        {
+            "host": [ "http://ms-openapi:5000" ],
+            "url_pattern": "api/docs/{version}/{api}",
+            "encoding": "no-op",
+            "method": "GET",
+            "extra_config": {}
+        }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+
+}
