@@ -1,5 +1,6 @@
 trigger:
   - dev
+  - sandbox
   - master
 
 resources:
@@ -7,6 +8,7 @@ resources:
     - repository: Pipelines
       type: git
       name: "Siigo/Siigo.Pipeline"
+      ref: refs/heads/poc-dev
 
 extends:
   template: gateway/gateway-pipeline.yaml@Pipelines
