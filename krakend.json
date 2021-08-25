@@ -36,7 +36,7 @@
     {{ include "ms-parameters.json" }},
     {{ include "ms-payment-types.json" }},
     {{ include "ms-browser.json" }},
-    {{ include "ms-import-products.json" }}
+    {{ include "ms-import-products.json" }},
     {{ include "ms-openapi.json" }}
 
   ],
