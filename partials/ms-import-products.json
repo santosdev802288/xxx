@@ -1,0 +1,24 @@
+{
+    "endpoint": "/api/importProduct/SaveList",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "POST",
+    "backend": [
+        {
+            "host": ["http://ms-import-products:5000"],
+            "url_pattern": "api/importProduct/SaveList",
+            "encoding": "no-op",
+            "method": "POST",
+            "extra_config": {
+                "github.com/devopsfaith/krakend-circuitbreaker/gobreaker": {
+                    "interval": 120,
+                    "timeout": 30,
+                    "maxErrors": 100,
+                    "name": "ms-import-products-SaveList-POST",
+                    "logStatusChange": true
+                }
+            }
+        }
+    ]
+}
