@@ -59,7 +59,7 @@
     ]
   },
   {
-    "endpoint": "api/CompanyBank/getbanksmovements",
+    "endpoint": "api/CompanyBank/getBanksMovements",
     "output_encoding": "no-op",
     "headers_to_pass": ["*"],
     "querystring_params": ["*"],
@@ -68,7 +68,7 @@
       {
         "method": "GET",
         "host": ["http://ms-bank:5000"],
-        "url_pattern": "api/CompanyBank/getbanksmovements",
+        "url_pattern": "api/CompanyBank/getBanksMovements",
         "encoding": "no-op"
       }
     ]
