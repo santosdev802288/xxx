@@ -107,6 +107,24 @@
     "concurrent_calls": 1
   },
   {
+    "endpoint": "/api/v1/documenttype/updateDocumentTypeByIdAsync",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "PUT",
+    "backend": [
+      {
+        "host": ["http://ms-document-type:5000"],
+        "url_pattern": "api/v1/documenttype/updateDocumentTypeByIdAsync",
+        "encoding": "no-op",
+        "method": "PUT",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  },
+  {
     "endpoint": "/api/v1/documenttype/currentdocnumber",
     "output_encoding": "no-op",
     "headers_to_pass": ["*"],
