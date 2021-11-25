@@ -44,6 +44,21 @@
   ]
 },
 {
+  "endpoint": "api/third-party/thirdparty/{identification}",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "GET",
+  "backend": [
+    {
+      "method": "GET",
+      "host": ["http://ms-thirdparty:5000"],
+      "url_pattern": "api/third-party/thirdparty/{identification}",
+      "encoding": "no-op"
+    }
+  ]
+},
+{
   "endpoint": "api/third-party/account/{id}/relation",
   "output_encoding": "no-op",
   "headers_to_pass": ["*"],
