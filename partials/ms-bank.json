@@ -104,6 +104,21 @@
     ]
   },
   {
+    "endpoint": "/api/companybank/updatebank/{id}",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "PUT",
+    "backend": [
+      {
+        "method": "PUT",
+        "host": ["http://ms-bank:5000"],
+        "url_pattern": "/api/companybank/updatebank/{id}",
+        "encoding": "no-op"
+      }
+    ]
+  },
+  {
     "endpoint": "api/company/moneyInfo",
     "output_encoding": "no-op",
     "headers_to_pass": ["*"],
