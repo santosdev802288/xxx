@@ -132,4 +132,19 @@
         "encoding": "no-op"
       }
     ]
+  },
+  {
+    "endpoint": "api/companybank/getlistbankstotals",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "method": "GET",
+        "host": ["http://ms-bank:5000"],
+        "url_pattern": "api/companybank/getlistbankstotals",
+        "encoding": "no-op"
+      }
+    ]
   }
