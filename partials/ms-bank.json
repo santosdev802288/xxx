@@ -104,7 +104,7 @@
     ]
   },
   {
-    "endpoint": "/api/CompanyBank/updateBank/{id}",
+    "endpoint": "api/CompanyBank/updateBank/{id}",
     "output_encoding": "no-op",
     "headers_to_pass": ["*"],
     "querystring_params": ["*"],
@@ -113,7 +113,7 @@
       {
         "method": "PUT",
         "host": ["http://ms-bank:5000"],
-        "url_pattern": "/api/CompanyBank/updateBank/{id}",
+        "url_pattern": "api/CompanyBank/updateBank/{id}",
         "encoding": "no-op"
       }
     ]
