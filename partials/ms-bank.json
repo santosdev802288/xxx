@@ -134,7 +134,7 @@
     ]
   },
   {
-    "endpoint": "api/companybank/getlistbankstotals",
+    "endpoint": "api/CompanyBank/getListBanksTotals",
     "output_encoding": "no-op",
     "headers_to_pass": ["*"],
     "querystring_params": ["*"],
@@ -143,7 +143,7 @@
       {
         "method": "GET",
         "host": ["http://ms-bank:5000"],
-        "url_pattern": "api/companybank/getlistbankstotals",
+        "url_pattern": "api/CompanyBank/getListBanksTotals",
         "encoding": "no-op"
       }
     ]
