@@ -1,0 +1,78 @@
+{
+    "endpoint": "/api/v1/Autocomplete/GetConfiguration",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "POST",
+    "backend": [
+      {
+        "host": ["http://ms-browser-sqlgateway:5000"],
+        "url_pattern": "/api/v1/Autocomplete/GetConfiguration",
+        "encoding": "no-op",
+        "method": "POST",
+        "extra_config": {
+          "github.com/devopsfaith/krakend-circuitbreaker/gobreaker": {
+            "interval": 120,
+            "timeout": 30,
+            "maxErrors": 100,
+            "name": "ms-browser-sqlgateway-GetConfiguration-POST",
+            "logStatusChange": true
+            }
+        }
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  },
+  {
+    "endpoint": "/api/v1/Autocomplete/GetData",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "POST",
+    "backend": [
+      {
+        "host": ["http://ms-browser-sqlgateway:5000"],
+        "url_pattern": "/api/v1/Autocomplete/GetData",
+        "encoding": "no-op",
+        "method": "POST",
+        "extra_config": {
+          "github.com/devopsfaith/krakend-circuitbreaker/gobreaker": {
+          "interval": 120,
+          "timeout": 30,
+          "maxErrors": 150,
+          "name": "ms-browser-sqlgateway-GetData-POST",
+          "logStatusChange": true
+          }
+        }
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  },
+  {
+    "endpoint": "/api/v1/Browser/GetDataItemBrowser",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "POST",
+    "backend": [
+      {
+        "host": ["http://ms-browser-sqlgateway:5000"],
+        "url_pattern": "/api/v1/Browser/GetDataItemBrowser",
+        "encoding": "no-op",
+        "method": "POST",
+        "extra_config": {
+          "github.com/devopsfaith/krakend-circuitbreaker/gobreaker": {
+            "interval": 120,
+            "timeout": 30,
+            "maxErrors": 100,
+            "name": "ms-browser-sqlgateway-GetDataItemBrowser-POST",
+            "logStatusChange": true
+            }
+        }
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  }
