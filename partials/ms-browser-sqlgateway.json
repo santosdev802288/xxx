@@ -1,5 +1,5 @@
 {
-    "endpoint": "/api/v1/Autocomplete/GetConfiguration",
+    "endpoint": "/api/v1/Autocomplete-sqlgateway/GetConfiguration",
     "output_encoding": "no-op",
     "headers_to_pass": ["*"],
     "querystring_params": ["*"],
@@ -25,7 +25,7 @@
     "concurrent_calls": 1
   },
   {
-    "endpoint": "/api/v1/Autocomplete/GetData",
+    "endpoint": "/api/v1/Autocomplete-sqlgateway/GetData",
     "output_encoding": "no-op",
     "headers_to_pass": ["*"],
     "querystring_params": ["*"],
@@ -51,7 +51,7 @@
     "concurrent_calls": 1
   },
   {
-    "endpoint": "/api/v1/Browser/GetDataItemBrowser",
+    "endpoint": "/api/v1/Browser-sqlgateway/GetDataItemBrowser",
     "output_encoding": "no-op",
     "headers_to_pass": ["*"],
     "querystring_params": ["*"],
