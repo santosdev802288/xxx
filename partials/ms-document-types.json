@@ -1,0 +1,108 @@
+{
+    "endpoint": "/api/v1/documenttypes/health",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-document-types:5000"],
+        "url_pattern": "health",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+},
+{
+    "endpoint": "/api/v1/documenttypes/getdocumenttypebydocclass/{docclass}",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-document-types:5000"],
+        "url_pattern": "api/v1/documenttypes/getdocumenttypebydocclass/{docclass}",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+},
+{
+  "endpoint": "/api/v1/documenttypes/getdocumenttypebyid/{id}",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "GET",
+  "backend": [
+    {
+      "host": ["http://ms-document-types:5000"],
+      "url_pattern": "api/v1/documenttypes/getdocumenttypebyid/{id}",
+      "encoding": "no-op",
+      "method": "GET",
+      "extra_config": {}
+    }
+  ],
+  "extra_config": {},
+  "concurrent_calls": 1
+},
+{
+  "endpoint": "/api/v1/documenttypes",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "POST",
+  "backend": [
+    {
+      "host": ["http://ms-document-types:5000"],
+      "url_pattern": "api/v1/documenttypes",
+      "encoding": "no-op",
+      "method": "POST",
+      "extra_config": {}
+    }
+  ],
+  "extra_config": {},
+  "concurrent_calls": 1
+},
+{
+  "endpoint": "/api/v1/documenttypes/{id}",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "DELETE",
+  "backend": [
+    {
+      "host": ["http://ms-document-types:5000"],
+      "url_pattern": "api/v1/documenttypes/{id}",
+      "encoding": "no-op",
+      "method": "DELETE",
+      "extra_config": {}
+    }
+  ],
+  "extra_config": {},
+  "concurrent_calls": 1
+},
+{
+  "endpoint": "/api/v1/documenttypes",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "PUT",
+  "backend": [
+    {
+      "host": ["http://ms-document-types:5000"],
+      "url_pattern": "api/v1/documenttypes",
+      "encoding": "no-op",
+      "method": "PUT",
+      "extra_config": {}
+    }
+  ],
+  "extra_config": {},
+  "concurrent_calls": 1
+}
