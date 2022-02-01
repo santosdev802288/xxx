@@ -29,6 +29,21 @@
     ]
   },
   {
+    "endpoint": "api/CompanyBank/getAutocompleteListConfig",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "POST",
+    "backend": [
+      {
+        "method": "POST",
+        "host": ["http://ms-bank:5000"],
+        "url_pattern": "api/CompanyBank/getAutocompleteListConfig",
+        "encoding": "no-op"
+      }
+    ]
+  },
+  {
     "endpoint": "api/bankingACAccounts/getAutocompleteConfig",
     "output_encoding": "no-op",
     "headers_to_pass": ["*"],
@@ -82,6 +97,21 @@
     "backend": [
       {
         "method": "GET",
+        "host": ["http://ms-bank:5000"],
+        "url_pattern": "api/CompanyBank/GetCompanyBanks",
+        "encoding": "no-op"
+      }
+    ]
+  },
+  {
+    "endpoint": "api/CompanyBank/GetCompanyBanks",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "POST",
+    "backend": [
+      {
+        "method": "POST",
         "host": ["http://ms-bank:5000"],
         "url_pattern": "api/CompanyBank/GetCompanyBanks",
         "encoding": "no-op"
