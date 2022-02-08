@@ -354,4 +354,34 @@
       "encoding": "no-op"
     }
   ]
+},
+{
+  "endpoint": "api/tax-classification/autocomplete/config",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "POST",
+  "backend": [
+    {
+      "method": "POST",
+      "host": ["http://ms-thirdparty:5000"],
+      "url_pattern": "api/tax-classification/autocomplete/config",
+      "encoding": "no-op"
+    }
+  ]
+},
+{
+  "endpoint": "api/tax-classification/autocomplete",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "POST",
+  "backend": [
+    {
+      "method": "POST",
+      "host": ["http://ms-thirdparty:5000"],
+      "url_pattern": "api/tax-classification/autocomplete",
+      "encoding": "no-op"
+    }
+  ]
 }
