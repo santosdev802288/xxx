@@ -39,4 +39,22 @@
     ],
     "extra_config": {},
     "concurrent_calls": 1
+},
+{
+  "endpoint": "/api/importProduct/GetFullTemplate/{planType}",
+  "output_encoding": "string",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "GET",
+  "backend": [
+    {
+      "host": ["http://ms-import-products:5000"],
+      "url_pattern": "api/importProduct/GetFullTemplate/{planType}",
+      "encoding": "string",
+      "method": "GET",
+      "extra_config": {}
+    }
+  ],
+  "extra_config": {},
+  "concurrent_calls": 1
 }
