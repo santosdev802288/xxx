@@ -514,4 +514,52 @@
     }],
     "extra_config": {},
     "concurrent_calls": 1
-}
+},
+{
+    "endpoint": "/api/account-group",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [{
+        "host": ["http://ms-product:5000"],
+        "url_pattern": "api/account-group",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {
+            "github.com/devopsfaith/krakend-circuitbreaker/gobreaker": {
+                "interval": 120,
+                "timeout": 30,
+                "maxErrors": 100,
+                "name": "ms-product-account-group-GET",
+                "logStatusChange": true
+            }
+        }
+    }],
+    "extra_config": {},
+    "concurrent_calls": 1
+},
+{
+    "endpoint": "/api/account-group/{id}",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [{
+        "host": ["http://ms-product:5000"],
+        "url_pattern": "api/account-group/{id}",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {
+            "github.com/devopsfaith/krakend-circuitbreaker/gobreaker": {
+                "interval": 120,
+                "timeout": 30,
+                "maxErrors": 100,
+                "name": "ms-product-account-group-id-GET",
+                "logStatusChange": true
+            }
+        }
+    }],
+    "extra_config": {},
+    "concurrent_calls": 1
+},
