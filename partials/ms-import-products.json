@@ -23,7 +23,7 @@
     ]
 },
 {
-    "endpoint": "/api/importProduct/GetColumnsList/{planType}",
+    "endpoint": "/api/importProduct/GetColumnsList",
     "output_encoding": "string",
     "headers_to_pass": ["*"],
     "querystring_params": ["*"],
@@ -31,7 +31,7 @@
     "backend": [
         {
             "host": ["http://ms-import-products:5000"],
-            "url_pattern": "/api/importProduct/GetColumnsList/{planType}",
+            "url_pattern": "/api/importProduct/GetColumnsList",
             "encoding": "string",
             "method": "GET",
             "extra_config": {}
@@ -41,7 +41,7 @@
     "concurrent_calls": 1
 },
 {
-  "endpoint": "/api/importProduct/GetFullTemplate/{planType}",
+  "endpoint": "/api/importProduct/GetFullTemplate",
   "output_encoding": "string",
   "headers_to_pass": ["*"],
   "querystring_params": ["*"],
@@ -49,9 +49,27 @@
   "backend": [
     {
       "host": ["http://ms-import-products:5000"],
-      "url_pattern": "api/importProduct/GetFullTemplate/{planType}",
+      "url_pattern": "api/importProduct/GetFullTemplate",
       "encoding": "string",
       "method": "GET",
+      "extra_config": {}
+    }
+  ],
+  "extra_config": {},
+  "concurrent_calls": 1
+},
+{
+  "endpoint": "api/importProduct/GetPersonalizedTemplate/",
+  "output_encoding": "string",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "POST",
+  "backend": [
+    {
+      "host": ["http://ms-import-products:5000"],
+      "url_pattern": "api/importProduct/GetPersonalizedTemplate/",
+      "encoding": "string",
+      "method": "POST",
       "extra_config": {}
     }
   ],
