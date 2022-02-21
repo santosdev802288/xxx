@@ -192,4 +192,79 @@
         "encoding": "no-op"
       }
     ]
+  },
+  {
+    "endpoint": "api/bankConciliation/Conciliation",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "POST",
+    "backend": [
+      {
+        "method": "POST",
+        "host": ["http://ms-bank:5000"],
+        "url_pattern": "api/bankConciliation/Conciliation",
+        "encoding": "no-op"
+      }
+    ]
+  },
+  {
+    "endpoint": "api/bankConciliation/ConciliationDetailCollection",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "method": "GET",
+        "host": ["http://ms-bank:5000"],
+        "url_pattern": "api/bankConciliation/ConciliationDetailCollection",
+        "encoding": "no-op"
+      }
+    ]
+  },
+  {
+    "endpoint": "api/bankConciliation/ConciliationHistory",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "method": "GET",
+        "host": ["http://ms-bank:5000"],
+        "url_pattern": "api/bankConciliation/ConciliationHistory",
+        "encoding": "no-op"
+      }
+    ]
+  },
+  {
+    "endpoint": "api/bankConciliation/Conciliation/{id}",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "method": "GET",
+        "host": ["http://ms-bank:5000"],
+        "url_pattern": "api/bankConciliation/Conciliation/{id}",
+        "encoding": "no-op"
+      }
+    ]
+  },
+  {
+    "endpoint": "api/bankConciliation/Conciliation",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "PATCH",
+    "backend": [
+      {
+        "method": "PATCH",
+        "host": ["http://ms-bank:5000"],
+        "url_pattern": "api/bankConciliation/Conciliation",
+        "encoding": "no-op"
+      }
+    ]
   }
