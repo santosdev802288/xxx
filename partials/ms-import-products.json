@@ -59,7 +59,7 @@
   "concurrent_calls": 1
 },
 {
-  "endpoint": "api/importProduct/GetPersonalizedTemplate/",
+  "endpoint": "api/importProduct/GetPersonalizedTemplate",
   "output_encoding": "string",
   "headers_to_pass": ["*"],
   "querystring_params": ["*"],
@@ -67,7 +67,7 @@
   "backend": [
     {
       "host": ["http://ms-import-products:5000"],
-      "url_pattern": "api/importProduct/GetPersonalizedTemplate/",
+      "url_pattern": "api/importProduct/GetPersonalizedTemplate",
       "encoding": "string",
       "method": "POST",
       "extra_config": {}
