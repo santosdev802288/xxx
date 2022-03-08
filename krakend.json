@@ -38,7 +38,8 @@
     {{ include "ms-payment-types.json" }},
     {{ include "ms-browser.json" }},
     {{ include "ms-import-products.json" }},
-    {{ include "ms-bank.json" }}
+    {{ include "ms-bank.json" }},
+    {{ include "ms-importphysicalcount.json" }}
 
   ],
   "extra_config": {
