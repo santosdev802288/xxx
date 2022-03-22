@@ -15,4 +15,42 @@
     ],
     "extra_config": {},
     "concurrent_calls": 1
+  },
+  {
+    "endpoint": "/api/importPhysicalCount/GetTableReport/{period}",
+    "output_encoding": "string",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "POST",
+    "timeout": "100000ms",
+    "backend": [
+      {
+        "host": ["http://ms-importphysicalcount:5000"],
+        "url_pattern": "/api/importPhysicalCount/GetTableReport/{period}",
+        "encoding": "string",
+        "method": "POST",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  },
+  {
+    "endpoint": "/api/importPhysicalCount/GetExcelTableReport",
+    "output_encoding": "string",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "POST",
+    "timeout": "100000ms",
+    "backend": [
+      {
+        "host": ["http://ms-importphysicalcount:5000"],
+        "url_pattern": "/api/importPhysicalCount/GetExcelTableReport",
+        "encoding": "string",
+        "method": "POST",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
   }
