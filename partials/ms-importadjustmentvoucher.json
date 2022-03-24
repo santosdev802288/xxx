@@ -1,5 +1,5 @@
 {
-    "endpoint": "/api/importadjustmentvoucher/GetFullTemplate",
+    "endpoint": "/api/importadjustmentvoucher/GetFullTemplate/{includeData}/{inventoryGroup}",
     "output_encoding": "string",
     "headers_to_pass": ["*"],
     "querystring_params": ["*"],
@@ -7,7 +7,7 @@
     "backend": [
       {
         "host": ["http://ms-importadjustmentvoucher:5000"],
-        "url_pattern": "api/importadjustmentvoucher/GetFullTemplate",
+        "url_pattern": "api/importadjustmentvoucher/GetFullTemplate/{includeData}/{inventoryGroup}",
         "encoding": "string",
         "method": "GET",
         "extra_config": {}
