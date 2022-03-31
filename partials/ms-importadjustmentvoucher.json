@@ -1,0 +1,18 @@
+{
+    "endpoint": "/api/importadjustmentvoucher/GetFullTemplate/{includeData}/{inventoryGroup}",
+    "output_encoding": "string",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-importadjustmentvoucher:5000"],
+        "url_pattern": "api/importadjustmentvoucher/GetFullTemplate/{includeData}/{inventoryGroup}",
+        "encoding": "string",
+        "method": "GET",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  }
