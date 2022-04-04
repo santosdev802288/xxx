@@ -1,5 +1,5 @@
 {
-    "endpoint": "/api/importadjustmentvoucher/GetFullTemplate",
+    "endpoint": "/api/importadjustmentvoucher/GetFullTemplate/{includeData}/{inventoryGroup}",
     "output_encoding": "string",
     "headers_to_pass": ["*"],
     "querystring_params": ["*"],
@@ -7,9 +7,28 @@
     "backend": [
       {
         "host": ["http://ms-importadjustmentvoucher:5000"],
-        "url_pattern": "api/importadjustmentvoucher/GetFullTemplate",
+        "url_pattern": "api/importadjustmentvoucher/GetFullTemplate/{includeData}/{inventoryGroup}",
         "encoding": "string",
         "method": "GET",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
+  },
+  {
+    "endpoint": "/api/importadjustmentvoucher/LoadAdjustmentVoucher",
+    "output_encoding": "string",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "POST",
+    "timeout": "100000ms",
+    "backend": [
+      {
+        "host": ["http://ms-importadjustmentvoucher:5000"],
+        "url_pattern": "/api/importadjustmentvoucher/LoadAdjustmentVoucher",
+        "encoding": "string",
+        "method": "POST",
         "extra_config": {}
       }
     ],
