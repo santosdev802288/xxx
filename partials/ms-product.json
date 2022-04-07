@@ -612,14 +612,14 @@
     "concurrent_calls": 1
 },
 {
-    "endpoint": "/api/product/{guid}/ChangeStateProduct",
+    "endpoint": "/api/product/{id}/ChangeStateProduct",
     "output_encoding": "no-op",
     "headers_to_pass": ["*"],
     "querystring_params": ["*"],
     "method": "GET",
     "backend": [{
         "host": ["http://ms-product:5000"],
-        "url_pattern": "api/product/{guid}/ChangeStateProduct",
+        "url_pattern": "api/product/{id}/ChangeStateProduct",
         "encoding": "no-op",
         "method": "GET",
         "extra_config": {
@@ -627,7 +627,7 @@
                 "interval": 120,
                 "timeout": 30,
                 "maxErrors": 100,
-                "name": "ms-product-guid-ChangeStateProduct-GET",
+                "name": "ms-product-id-ChangeStateProduct-GET",
                 "logStatusChange": true
             }
         }
