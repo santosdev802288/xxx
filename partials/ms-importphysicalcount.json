@@ -72,4 +72,22 @@
     ],
     "extra_config": {},
     "concurrent_calls": 1
+  },
+  {
+    "endpoint": "/api/importPhysicalCount/GetTemplateWithData",
+    "output_encoding": "string",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-importphysicalcount:5000"],
+        "url_pattern": "api/importPhysicalCount/GetTemplateWithData",
+        "encoding": "string",
+        "method": "GET",
+        "extra_config": {}
+      }
+    ],
+    "extra_config": {},
+    "concurrent_calls": 1
   }
