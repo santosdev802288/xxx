@@ -56,7 +56,7 @@
   },
   {
     "endpoint": "/api/importPhysicalCount/ValidateTemplate",
-    "output_encoding": "string",
+    "output_encoding": "no-op",
     "headers_to_pass": ["*"],
     "querystring_params": ["*"],
     "method": "POST",
