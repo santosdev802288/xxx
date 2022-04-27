@@ -65,7 +65,7 @@
       {
         "host": ["http://ms-importphysicalcount:5000"],
         "url_pattern": "/api/importPhysicalCount/ValidateTemplate",
-        "encoding": "string",
+        "encoding": "no-op",
         "method": "POST",
         "extra_config": {}
       }
