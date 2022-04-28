@@ -56,7 +56,7 @@
   },
   {
     "endpoint": "/api/importPhysicalCount/ValidateTemplate",
-    "output_encoding": "no-op",
+    "output_encoding": "string",
     "headers_to_pass": ["*"],
     "querystring_params": ["*"],
     "method": "POST",
@@ -65,7 +65,7 @@
       {
         "host": ["http://ms-importphysicalcount:5000"],
         "url_pattern": "/api/importPhysicalCount/ValidateTemplate",
-        "encoding": "no-op",
+        "encoding": "string",
         "method": "POST",
         "extra_config": {}
       }
