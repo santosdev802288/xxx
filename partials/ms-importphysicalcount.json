@@ -74,7 +74,7 @@
     "concurrent_calls": 1
   },
   {
-    "endpoint": "/api/importPhysicalCount/GetTemplateWithData",
+    "endpoint": "/api/importPhysicalCount/GetTemplateWithData/{accountGroup}",
     "output_encoding": "string",
     "headers_to_pass": ["*"],
     "querystring_params": ["*"],
@@ -82,7 +82,7 @@
     "backend": [
       {
         "host": ["http://ms-importphysicalcount:5000"],
-        "url_pattern": "api/importPhysicalCount/GetTemplateWithData",
+        "url_pattern": "api/importPhysicalCount/GetTemplateWithData/{accountGroup}",
         "encoding": "string",
         "method": "GET",
         "extra_config": {}
