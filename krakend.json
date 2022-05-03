@@ -40,7 +40,8 @@
     {{ include "ms-import-products.json" }},
     {{ include "ms-bank.json" }},
     {{ include "ms-importphysicalcount.json" }},
-    {{ include "ms-importadjustmentvoucher.json" }}
+    {{ include "ms-importadjustmentvoucher.json" }},
+    {{ include "ms-costcenters.json" }}
 
   ],
   "extra_config": {
