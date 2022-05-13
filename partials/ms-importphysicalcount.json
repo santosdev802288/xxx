@@ -1,5 +1,5 @@
   {
-    "endpoint": "/api/importPhysicalCount/GetFullTemplate",
+    "endpoint": "/api/importPhysicalCount/GetFullTemplate/{includeData}/{inventoryGroup}",
     "output_encoding": "string",
     "headers_to_pass": ["*"],
     "querystring_params": ["*"],
@@ -7,7 +7,7 @@
     "backend": [
       {
         "host": ["http://ms-importphysicalcount:5000"],
-        "url_pattern": "api/importPhysicalCount/GetFullTemplate",
+        "url_pattern": "api/importPhysicalCount/GetFullTemplate/{includeData}/{inventoryGroup}",
         "encoding": "string",
         "method": "GET",
         "extra_config": {}
