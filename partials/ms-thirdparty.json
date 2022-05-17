@@ -417,4 +417,22 @@
       "encoding": "no-op"
     }
   ]
+},
+{
+  "endpoint": "api/third-party/blacklist/{rfcCode}",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "GET",
+  "backend": [
+    {
+      "host": ["http://ms-thirdparty:5000"],
+      "url_pattern": "api/third-party/blacklist/{rfcCode}",
+      "encoding": "no-op",
+      "method": "GET",
+      "extra_config": {}
+    }
+  ],
+  "extra_config": {},
+  "concurrent_calls": 1
 }
