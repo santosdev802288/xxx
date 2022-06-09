@@ -1,0 +1,30 @@
+{
+  "endpoint": "/api/status/company",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "GET",
+  "backend": [
+    {
+      "host": ["http://ms-companyqueries.siigo-catalog.svc.cluster.local:5000"],
+      "url_pattern": "health",
+      "encoding": "no-op",
+      "method": "GET"
+    }
+  ]
+},
+{
+  "endpoint": "/api/company/getinfo",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "GET",
+  "backend": [
+    {
+      "host": ["http://ms-companyqueries.siigo-catalog.svc.cluster.local:5000"],
+      "url_pattern": "company/getinfo",
+      "encoding": "no-op",
+      "method": "GET"
+    }
+  ]
+}
