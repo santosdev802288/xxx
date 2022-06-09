@@ -6,7 +6,7 @@
   "method": "GET",
   "backend": [
     {
-      "host": ["http://ms-companyqueries.siigo-catalog.svc.cluster.local:5000"],
+      "host": ["http://ms-companyqueries:5000"],
       "url_pattern": "health",
       "encoding": "no-op",
       "method": "GET"
@@ -21,7 +21,7 @@
   "method": "GET",
   "backend": [
     {
-      "host": ["http://ms-companyqueries.siigo-catalog.svc.cluster.local:5000"],
+      "host": ["http://ms-companyqueries:5000"],
       "url_pattern": "company/getinfo",
       "encoding": "no-op",
       "method": "GET"
