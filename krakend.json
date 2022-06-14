@@ -41,7 +41,9 @@
     {{ include "ms-bank.json" }},
     {{ include "ms-importphysicalcount.json" }},
     {{ include "ms-importadjustmentvoucher.json" }},
-    {{ include "ms-costcenters.json" }}
+    {{ include "ms-costcenters.json" }},
+    {{ include "ms-customuserprofiles.json" }},
+    {{ include "ms-companyqueries.json" }}
 
   ],
   "extra_config": {
