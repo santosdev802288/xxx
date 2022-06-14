@@ -6,7 +6,7 @@
     "method": "GET",
     "backend": [
       {
-        "host": ["http://ms-customuserprofiles:5000"],
+        "host": ["http://ms-customuserprofiles:11000"],
         "url_pattern": "/api/health",
         "encoding": "no-op",
         "method": "GET"
