@@ -1,0 +1,30 @@
+{
+    "endpoint": "/api/geography/health",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-geography:11000"],
+        "url_pattern": "/api/health",
+        "encoding": "no-op",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/geography/countries",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "method": "GET",
+        "host": ["http://ms-geography:11000"],
+        "url_pattern": "api/v1/countries",
+        "encoding": "no-op"
+      }
+    ]
+  }
