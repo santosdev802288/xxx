@@ -468,6 +468,78 @@
     "concurrent_calls": 1
 },
 {
+    "endpoint": "/api/cfdikeys",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [{
+        "host": ["http://ms-product:5000"],
+        "url_pattern": "api/cfdikeys",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {
+            "github.com/devopsfaith/krakend-circuitbreaker/gobreaker": {
+                "interval": 120,
+                "timeout": 30,
+                "maxErrors": 100,
+                "name": "ms-product-cfdikeys-GET",
+                "logStatusChange": true
+            }
+        }
+    }],
+    "extra_config": {},
+    "concurrent_calls": 1
+},
+{
+    "endpoint": "/api/cfdikeys/{code}",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [{
+        "host": ["http://ms-product:5000"],
+        "url_pattern": "api/cfdikeys/{code}",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {
+            "github.com/devopsfaith/krakend-circuitbreaker/gobreaker": {
+                "interval": 120,
+                "timeout": 30,
+                "maxErrors": 100,
+                "name": "ms-product-cfdikeys-codes-GET",
+                "logStatusChange": true
+            }
+        }
+    }],
+    "extra_config": {},
+    "concurrent_calls": 1
+},
+{
+    "endpoint": "/api/cfdikey/{id}",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [{
+        "host": ["http://ms-product:5000"],
+        "url_pattern": "api/cfdikey/{id}",
+        "encoding": "no-op",
+        "method": "GET",
+        "extra_config": {
+            "github.com/devopsfaith/krakend-circuitbreaker/gobreaker": {
+                "interval": 120,
+                "timeout": 30,
+                "maxErrors": 100,
+                "name": "ms-product-cfdikey-id-GET",
+                "logStatusChange": true
+            }
+        }
+    }],
+    "extra_config": {},
+    "concurrent_calls": 1
+},
+{
     "endpoint": "/api/priceList",
     "output_encoding": "no-op",
     "headers_to_pass": ["*"],
