@@ -12,4 +12,49 @@
         "method": "GET"
       }
     ]
+  },
+  {
+    "endpoint": "/api/userprofile",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-customuserprofiles:11000"],
+        "url_pattern": "/api/userprofile",
+        "encoding": "no-op",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/userprofile/detail",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "POST",
+    "backend": [
+      {
+        "host": ["http://ms-customuserprofiles:11000"],
+        "url_pattern": "/api/userprofile/detail",
+        "encoding": "no-op",
+        "method": "POST"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/profiles",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-customuserprofiles:11000"],
+        "url_pattern": "/api/profiles",
+        "encoding": "no-op",
+        "method": "GET"
+      }
+    ]
   }
