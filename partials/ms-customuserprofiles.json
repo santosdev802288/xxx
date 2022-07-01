@@ -44,6 +44,21 @@
     ]
   },
   {
+    "endpoint": "/api/userprofile/detail",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-customuserprofiles:11000"],
+        "url_pattern": "/api/userprofile/detail",
+        "encoding": "no-op",
+        "method": "GET"
+      }
+    ]
+  },
+  {
     "endpoint": "/api/userprofile/profiles",
     "output_encoding": "no-op",
     "headers_to_pass": ["*"],

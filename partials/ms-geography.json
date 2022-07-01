@@ -83,7 +83,7 @@
       {
         "method": "GET",
         "host": ["http://ms-geography:11000"],
-        "url_pattern": "/api/v1/subdivision/cities/{subdivisioniso}",
+        "url_pattern": "/api/v1/CitiesBySubdivision/{subdivisioniso}",
         "encoding": "no-op"
       }
     ]
@@ -98,7 +98,7 @@
       {
         "method": "GET",
         "host": ["http://ms-geography:11000"],
-        "url_pattern": "/api/v1/country/cities/{countryiso}",
+        "url_pattern": "/api/v1/CitiesByCountry/{countryiso}",
         "encoding": "no-op"
       }
     ]
@@ -114,6 +114,96 @@
         "method": "GET",
         "host": ["http://ms-geography:11000"],
         "url_pattern": "/api/v1/city/{code}",
+        "encoding": "no-op"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/geography/v1/country",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "method": "GET",
+        "host": ["http://ms-geography:11000"],
+        "url_pattern": "/api/v1/country",
+        "encoding": "no-op"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/geography/v1/subdivisions",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "method": "GET",
+        "host": ["http://ms-geography:11000"],
+        "url_pattern": "/api/v1/subdivisions",
+        "encoding": "no-op"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/geography/v1/subdivision",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "method": "GET",
+        "host": ["http://ms-geography:11000"],
+        "url_pattern": "/api/v1/subdivision",
+        "encoding": "no-op"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/geography/v1/CitiesBySubdivision",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "method": "GET",
+        "host": ["http://ms-geography:11000"],
+        "url_pattern": "/api/v1/CitiesBySubdivision",
+        "encoding": "no-op"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/geography/v1/CitiesByCountry",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "method": "GET",
+        "host": ["http://ms-geography:11000"],
+        "url_pattern": "/api/v1/CitiesByCountry",
+        "encoding": "no-op"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/geography/v1/city",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "method": "GET",
+        "host": ["http://ms-geography:11000"],
+        "url_pattern": "/api/v1/city",
         "encoding": "no-op"
       }
     ]
