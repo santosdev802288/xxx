@@ -1,5 +1,5 @@
 {
-    "endpoint": "/api/status/userprofiles",
+    "endpoint": "/api/status/userprofile",
     "output_encoding": "no-op",
     "headers_to_pass": ["*"],
     "querystring_params": ["*"],
@@ -59,7 +59,7 @@
     ]
   },
   {
-    "endpoint": "/api/profiles",
+    "endpoint": "/api/userprofile/profiles",
     "output_encoding": "no-op",
     "headers_to_pass": ["*"],
     "querystring_params": ["*"],
@@ -68,6 +68,21 @@
       {
         "host": ["http://ms-customuserprofiles:11000"],
         "url_pattern": "/api/profiles",
+        "encoding": "no-op",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/userprofile/isActionAllowedToUser/{action}",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-customuserprofiles:11000"],
+        "url_pattern": "/api/isActionAllowedToUser/{action}",
         "encoding": "no-op",
         "method": "GET"
       }
