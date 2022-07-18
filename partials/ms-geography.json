@@ -207,4 +207,49 @@
         "encoding": "no-op"
       }
     ]
+  },
+  {
+    "endpoint": "/api/geography/v1/country/{iso}",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "PUT",
+    "backend": [
+      {
+        "method": "PUT",
+        "host": ["http://ms-geography:11000"],
+        "url_pattern": "/api/v1/country/{iso}",
+        "encoding": "no-op"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/geography/v1/subdivision/{iso}",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "PUT",
+    "backend": [
+      {
+        "method": "PUT",
+        "host": ["http://ms-geography:11000"],
+        "url_pattern": "/api/v1/subdivision/{iso}",
+        "encoding": "no-op"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/geography/v1/city/{code}",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "PUT",
+    "backend": [
+      {
+        "method": "PUT",
+        "host": ["http://ms-geography:11000"],
+        "url_pattern": "/api/v1/city/{code}",
+        "encoding": "no-op"
+      }
+    ]
   }
