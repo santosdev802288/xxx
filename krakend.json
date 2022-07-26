@@ -44,7 +44,7 @@
     {{ include "ms-costcenters.json" }},
     {{ include "ms-customuserprofiles.json" }},
     {{ include "ms-companyqueries.json" }},
-    {{ include "ms-geography.json" }}
+    {{ include "ms-geography.json" }},
     {{ include "ms-possettings.json" }}
 
   ],
