@@ -60,7 +60,7 @@
   "method": "GET",
   "backend": [
     {
-      "host": ["http://ms-possettings:5000"],
+      "host": ["http://ms-settings:5000"],
       "url_pattern": "/api/v1/settings/{documentCode}",
       "encoding": "no-op",
       "method": "GET"
@@ -75,7 +75,7 @@
   "method": "PUT",
   "backend": [
     {
-      "host": ["http://ms-possettings:5000"],
+      "host": ["http://ms-settings:5000"],
       "url_pattern": "/api/v1/settings/{documentCode}",
       "encoding": "no-op",
       "method": "PUT"
@@ -90,7 +90,7 @@
   "method": "DELETE",
   "backend": [
     {
-      "host": ["http://ms-possettings:5000"],
+      "host": ["http://ms-settings:5000"],
       "url_pattern": "/api/v1/settings/{documentCode}",
       "encoding": "no-op",
       "method": "DELETE"
