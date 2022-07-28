@@ -104,6 +104,21 @@
     ]
   },
   {
+    "endpoint": "/api/userprofile/profiles",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "POST",
+    "backend": [
+      {
+        "host": ["http://ms-customuserprofiles:11000"],
+        "url_pattern": "/api/profiles/",
+        "encoding": "no-op",
+        "method": "POST"
+      }
+    ]
+  },
+  {
     "endpoint": "/api/userprofile/profiles/{id}",
     "output_encoding": "no-op",
     "headers_to_pass": ["*"],
@@ -160,6 +175,21 @@
         "url_pattern": "/api/customprofiles/users",
         "encoding": "no-op",
         "method": "GET"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/userprofile/sections",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "POST",
+    "backend": [
+      {
+        "host": ["http://ms-customuserprofiles:11000"],
+        "url_pattern": "/api/sections/",
+        "encoding": "no-op",
+        "method": "POST"
       }
     ]
   },
