@@ -43,7 +43,8 @@
     {{ include "ms-importadjustmentvoucher.json" }},
     {{ include "ms-costcenters.json" }},
     {{ include "ms-customuserprofiles.json" }},
-    {{ include "ms-companyqueries.json" }}
+    {{ include "ms-companyqueries.json" }},
+    {{ include "ms-possettings.json" }}
 
   ],
   "extra_config": {
