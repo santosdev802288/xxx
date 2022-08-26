@@ -419,7 +419,7 @@
   ]
 },
 {
-  "endpoint": "api/third-party/blacklist/{rfcCode}",
+  "endpoint": "api/third-party/blacklist/{rfcCode}/{socialReasonTypeCode}",
   "output_encoding": "no-op",
   "headers_to_pass": ["*"],
   "querystring_params": ["*"],
@@ -427,7 +427,7 @@
   "backend": [
     {
       "host": ["http://ms-thirdparty:5000"],
-      "url_pattern": "api/third-party/blacklist/{rfcCode}",
+      "url_pattern": "api/third-party/blacklist/{rfcCode}/{socialReasonTypeCode}",
       "encoding": "no-op",
       "method": "GET",
       "extra_config": {}
@@ -437,7 +437,7 @@
   "concurrent_calls": 1
 },
 {
-  "endpoint": "api/third-party/cpcatalog/{rfcCode}/{postalCode}/{name}",
+  "endpoint": "api/third-party/cpcatalog/{rfcCode}/{postalCode}/{name}/{socialReasonTypeCode}",
   "output_encoding": "no-op",
   "headers_to_pass": ["*"],
   "querystring_params": ["*"],
@@ -445,7 +445,7 @@
   "backend": [
     {
       "host": ["http://ms-thirdparty:5000"],
-      "url_pattern": "api/third-party/cpcatalog/{rfcCode}/{postalCode}/{name}",
+      "url_pattern": "api/third-party/cpcatalog/{rfcCode}/{postalCode}/{name}/{socialReasonTypeCode}",
       "encoding": "no-op",
       "method": "GET",
       "extra_config": {}
