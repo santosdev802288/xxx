@@ -191,7 +191,7 @@
     "concurrent_calls": 1
   },
   {
-    "endpoint": "/api/parameters/used-cfdi",
+    "endpoint": "/api/parameters/use-cfdi",
     "output_encoding": "no-op",
     "headers_to_pass": ["*"],
     "querystring_params": ["*"],
@@ -199,7 +199,7 @@
     "backend": [
       {
         "host": ["http://ms-parameters:5000"],
-        "url_pattern": "/api/parameters/used-cfdi",
+        "url_pattern": "/api/parameters/use-cfdi",
         "encoding": "no-op",
         "method": "GET",
         "extra_config": {}
