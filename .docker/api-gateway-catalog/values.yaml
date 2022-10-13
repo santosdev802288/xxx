@@ -151,6 +151,14 @@ siigo-chart:
   labels:
     tags:
       datadoghq:
-        com: {}
+        com:
+          tribu: tsb
+          owner: tsb
+
+  requiredLabels:
+    tags:
+      datadoghq:
+        com:
+          - tsb
 
   priorityclass: {}
