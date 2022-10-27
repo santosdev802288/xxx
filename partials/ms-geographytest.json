@@ -1,0 +1,30 @@
+{
+    "endpoint": "/api/geographytest/health",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-citypagination:5000"],
+        "url_pattern": "/health",
+        "encoding": "no-op",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/geographytest/graphql",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "method": "GET",
+        "host": ["http://ms-citypagination:5000"],
+        "url_pattern": "/graphql",
+        "encoding": "no-op"
+      }
+    ]
+  }
