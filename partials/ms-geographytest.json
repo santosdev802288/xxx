@@ -18,11 +18,13 @@
     "output_encoding": "no-op",
     "headers_to_pass": ["*"],
     "querystring_params": ["*"],
+    "method": "POST",
     "backend": [
       {
         "host": ["http://ms-citypagination:5000"],
         "url_pattern": "/graphql",
-        "encoding": "no-op"
+        "encoding": "no-op",
+        "method": "POST"
       }
     ]
   }
