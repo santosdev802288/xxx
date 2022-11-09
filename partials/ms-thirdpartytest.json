@@ -1,12 +1,12 @@
 {
-    "endpoint": "/api/geographygraphqltest/health",
+    "endpoint": "/api/thirdpartygraphqltest/health",
     "output_encoding": "no-op",
     "headers_to_pass": ["*"],
     "querystring_params": ["*"],
     "method": "GET",
     "backend": [
       {
-        "host": ["http://ms-geographygraphqltest:5000"],
+        "host": ["http://ms-thirdpartygraphqltest:5000"],
         "url_pattern": "/health",
         "encoding": "no-op",
         "method": "GET"
@@ -14,14 +14,14 @@
     ]
   },
   {
-    "endpoint": "/api/geographygraphqltest/graphql",
+    "endpoint": "/api/thirdpartygraphqltest/graphql",
     "output_encoding": "no-op",
     "headers_to_pass": ["*"],
     "querystring_params": ["*"],
     "method": "POST",
     "backend": [
       {
-        "host": ["http://ms-geographygraphqltest:5000"],
+        "host": ["http://ms-thirdpartygraphqltest:5000"],
         "url_pattern": "/graphql",
         "encoding": "no-op",
         "method": "POST"
