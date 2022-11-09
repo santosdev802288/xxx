@@ -1,0 +1,91 @@
+{
+    "endpoint": "/api/status/productdomain",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-productdomain:5000"],
+        "url_pattern": "/health",
+        "encoding": "no-op",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/productdomain/inventorygroup",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-productdomain:5000"],
+        "url_pattern": "/api/v1/inventorygroup",
+        "encoding": "no-op",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/productdomain/inventorygroup/{id}",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-productdomain:5000"],
+        "url_pattern": "/api/v1/inventorygroup/{id}",
+        "encoding": "no-op",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/productdomain/inventorygroup",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "POST",
+    "backend": [
+      {
+        "host": ["http://ms-productdomain:5000"],
+        "url_pattern": "/api/v1/inventorygroup",
+        "encoding": "no-op",
+        "method": "POST"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/productdomain/inventorygroup/{id}",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "PUT",
+    "backend": [
+      {
+        "host": ["http://ms-productdomain:5000"],
+        "url_pattern": "/api/v1/inventorygroup/{id}",
+        "encoding": "no-op",
+        "method": "PUT"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/productdomain/inventorygroup/{id}",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "DELETE",
+    "backend": [
+      {
+        "host": ["http://ms-productdomain:5000"],
+        "url_pattern": "/api/v1/inventorygroup/{id}",
+        "encoding": "no-op",
+        "method": "DELETE"
+      }
+    ]
+  },
+  
