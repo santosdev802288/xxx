@@ -46,7 +46,8 @@
     {{ include "ms-companyqueries.json" }},
     {{ include "ms-geography.json" }},
     {{ include "ms-possettings.json" }},
-    {{ include "ms-geographytest.json" }}
+    {{ include "ms-geographytest.json" }},
+    {{ include "ms-thirdpartytest.json" }}
 
   ],
   "extra_config": {
