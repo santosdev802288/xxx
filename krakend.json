@@ -47,8 +47,8 @@
     {{ include "ms-geography.json" }},
     {{ include "ms-possettings.json" }},
     {{ include "ms-geographytest.json" }},
-    {{ include "ms-thirdpartytest.json" }}
-
+    {{ include "ms-thirdpartytest.json" }},
+    {{ include "ms-graphqlgateway.json" }}
   ],
   "extra_config": {
     "github_com/devopsfaith/krakend-cors": {
