@@ -22,7 +22,7 @@
     "backend": [
       {
         "host": ["http://ms-graphqlgateway:57095"],
-        "url_pattern": "/graphql",
+        "url_pattern": "",
         "encoding": "no-op",
         "method": "POST"
       }
