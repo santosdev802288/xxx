@@ -6,7 +6,7 @@
     "method": "GET",
     "backend": [
       {
-        "host": ["http://ms-graphqlgateway:57095"],
+        "host": ["http://ms-graphqlgateway:5000"],
         "url_pattern": "/health",
         "encoding": "no-op",
         "method": "GET"
@@ -21,7 +21,7 @@
     "method": "POST",
     "backend": [
       {
-        "host": ["http://ms-graphqlgateway:57095"],
+        "host": ["http://ms-graphqlgateway:5000"],
         "url_pattern": "",
         "encoding": "no-op",
         "method": "POST"
