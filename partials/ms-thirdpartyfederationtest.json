@@ -1,0 +1,30 @@
+{
+    "endpoint": "/api/thirdpartyfederationtest/health",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "host": ["http://ms-thirdpartyfederationtest:5000"],
+        "url_pattern": "/health",
+        "encoding": "no-op",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/thirdpartyfederationtest/graphql",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "POST",
+    "backend": [
+      {
+        "host": ["http://ms-thirdpartyfederationtest:5000"],
+        "url_pattern": "/graphql",
+        "encoding": "no-op",
+        "method": "POST"
+      }
+    ]
+  }
