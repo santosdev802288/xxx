@@ -106,7 +106,7 @@
   "backend": [
     {
       "host": ["http://ms-posorchestrator:5000"],
-      "url_pattern": "/api/v1/hellowork",
+      "url_pattern": "/api/hellowork",
       "encoding": "no-op",
       "method": "GET"
     }
