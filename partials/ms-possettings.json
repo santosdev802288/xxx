@@ -96,4 +96,19 @@
       "method": "DELETE"
     }
   ]
+},
+{
+  "endpoint": "posorchestrator/api/v1/hello",
+  "output_encoding": "no-op",
+  "headers_to_pass": ["*"],
+  "querystring_params": ["*"],
+  "method": "GET",
+  "backend": [
+    {
+      "host": ["http://ms-posorchestrator:5000"],
+      "url_pattern": "/api/v1/hellowork",
+      "encoding": "no-op",
+      "method": "GET"
+    }
+  ]
 }
