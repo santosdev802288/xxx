@@ -27,4 +27,19 @@
         "method": "POST"
       }
     ]
+  },
+  {
+    "endpoint": "/api/thirdpartyfederationtest/export/{limit}",
+    "output_encoding": "no-op",
+    "headers_to_pass": ["*"],
+    "querystring_params": ["*"],
+    "method": "GET",
+    "backend": [
+      {
+        "method": "GET",
+        "host": ["http://ms-thirdpartyfederationtest:5000"],
+        "url_pattern": "/api/v1/thirdpartyfull/export/{limit}",
+        "encoding": "no-op"
+      }
+    ]
   }
